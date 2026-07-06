@@ -27,9 +27,9 @@ tailwind.config = {
         "surface-container-highest": "#343539",
         "surface-variant": "#343539",
         "error": "#ffb4ab",
+        "error-container": "#93000a",
         "outline-variant": "#46474a",
         "surface-container": "#1e1f23",
-        "error-container": "#93000a",
         "secondary-container": "#af8d11",
         "primary": "#c8c6c7",
         "on-surface-variant": "#c7c6ca"
@@ -69,8 +69,11 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
       <span class="text-lg font-bold tracking-tight">Trabahero</span>
     </div>
     <div class="hidden md:flex items-center gap-6 text-sm font-medium text-on-surface-variant">
-      <a href="#how-it-works" class="hover:text-secondary transition-colors">How It Works</a>
       <a href="#features" class="hover:text-secondary transition-colors">Features</a>
+      <a href="#scam-scan" class="hover:text-secondary transition-colors">Scam Scan</a>
+      <a href="#resume-match" class="hover:text-secondary transition-colors">Resume Match</a>
+      <a href="#element-picker" class="hover:text-secondary transition-colors">Element Picker</a>
+      <a href="#popup" class="hover:text-secondary transition-colors">Popup Panel</a>
       <a href="#technology" class="hover:text-secondary transition-colors">Technology</a>
       <a href="#team" class="hover:text-secondary transition-colors">Team</a>
       <a href="#support" class="hover:text-secondary transition-colors">Support</a>
@@ -88,24 +91,25 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
     <div class="max-w-3xl mx-auto text-center">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6">
         <span class="material-symbols-outlined text-sm">shield</span>
-        AI-Powered Protection
+        AI-Powered Job Scam Detection
       </div>
       <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-        Job Scam Detection
-        <span class="text-secondary">for Filipino Job Seekers</span>
+        A Universal Visual
+        <span class="text-secondary">Job-Scam Detection</span>
+        System for Filipino Job Seekers
       </h1>
       <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl mx-auto">
-        Trabahero is a browser extension that visually analyzes job listings in real-time,
-        detecting common scam patterns before you apply. Pick an element, scan it, and get instant risk assessment.
+        Trabahero is a Chrome extension that visually analyzes job listings in real-time —
+        detecting scam patterns, matching your resume, and keeping you safe. All inside your browser sidebar.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#" class="gradient-gold text-black font-bold px-8 py-3.5 rounded-xl inline-flex items-center gap-2 hover:opacity-90 transition-opacity text-lg">
           <span class="material-symbols-outlined">download</span>
           Add to Chrome
         </a>
-        <a href="#how-it-works" class="flex items-center gap-2 text-on-surface-variant hover:text-secondary transition-colors font-medium px-6 py-3.5 border border-outline-variant/30 rounded-xl">
+        <a href="#features" class="flex items-center gap-2 text-on-surface-variant hover:text-secondary transition-colors font-medium px-6 py-3.5 border border-outline-variant/30 rounded-xl">
           <span class="material-symbols-outlined">play_arrow</span>
-          See How It Works
+          Explore Features
         </a>
       </div>
     </div>
@@ -113,13 +117,13 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
 </section>
 
 <!-- How It Works -->
-<section id="how-it-works" class="py-20 md:py-28 border-t border-outline-variant/10">
+<section id="features" class="py-20 md:py-28 border-t border-outline-variant/10">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-16">
       <span class="text-secondary font-semibold text-sm tracking-widest uppercase">How It Works</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-3">Three Steps to Stay Protected</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Protection in Three Steps</h2>
       <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
-        Trabahero lives in your browser and works alongside you as you browse job listings.
+        Trabahero lives in your browser and works alongside you as you browse job listings on any website.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-8">
@@ -130,7 +134,8 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
         <span class="text-secondary font-bold text-sm">Step 1</span>
         <h3 class="text-xl font-bold mt-2 mb-3">Pick an Element</h3>
         <p class="text-on-surface-variant text-sm leading-relaxed">
-          Click on any job listing element on the page — title, company, salary — and Trabahero captures it for analysis.
+          Click the Trabahero toolbar icon to open the popup, then launch the side panel.
+          Use the element picker to visually select any job posting on the page — title, company, salary, or the entire listing card.
         </p>
       </div>
       <div class="bg-surface-container rounded-2xl p-8 text-center card-hover border border-outline-variant/10">
@@ -138,9 +143,11 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
           <span class="material-symbols-outlined text-black">bolt</span>
         </div>
         <span class="text-secondary font-bold text-sm">Step 2</span>
-        <h3 class="text-xl font-bold mt-2 mb-3">AI Scans for Scams</h3>
+        <h3 class="text-xl font-bold mt-2 mb-3">AI-Powered Analysis</h3>
         <p class="text-on-surface-variant text-sm leading-relaxed">
-          Our ML models analyze the content against known scam patterns — vague salaries, AI-generated text, suspicious domains.
+          Trabahero's ML models analyze the element's content for scam patterns —
+          unprofessional domains, vague salary ranges, AI-generated text, and suspicious contact information.
+          A screenshot is captured for visual verification.
         </p>
       </div>
       <div class="bg-surface-container rounded-2xl p-8 text-center card-hover border border-outline-variant/10">
@@ -150,76 +157,241 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
         <span class="text-secondary font-bold text-sm">Step 3</span>
         <h3 class="text-xl font-bold mt-2 mb-3">Get Instant Results</h3>
         <p class="text-on-surface-variant text-sm leading-relaxed">
-          See a risk score, red flags, and a detailed breakdown — all within your browser sidebar.
+          View a detailed risk score with an animated gauge, a list of red flags with critical severity badges,
+          and a full breakdown — all inside your browser sidebar. No page reloads needed.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Features -->
-<section id="features" class="py-20 md:py-28 gradient-dark border-t border-outline-variant/10">
+<!-- Scam Scan Feature -->
+<section id="scam-scan" class="py-20 md:py-28 gradient-dark border-t border-outline-variant/10">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-16">
-      <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Features</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-3">Everything You Need to Spot Job Scams</h2>
+      <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Feature</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Scam Scan View</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
+        The primary view for detecting fraudulent job listings. Access it from the sidebar navigation.
+      </p>
     </div>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-black">description</span>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">warning</span>
+        </div>
+        <h3 class="font-bold mb-1">Security Banner</h3>
+        <p class="text-on-surface-variant text-sm">Shows the scan status (High Risk, Medium Risk, Low Risk) and the job listing currently being analyzed.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">speed</span>
+        </div>
+        <h3 class="font-bold mb-1">Risk Gauge</h3>
+        <p class="text-on-surface-variant text-sm">An animated SVG circular gauge with a gold gradient arc that displays the numerical risk score (0-100) and a description of the risk level.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">flag</span>
+        </div>
+        <h3 class="font-bold mb-1">Red Flags List</h3>
+        <p class="text-on-surface-variant text-sm">Lists detected scam indicators with a critical severity badge. Each flag has an icon, title, and description explaining the risk.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">refresh</span>
+        </div>
+        <h3 class="font-bold mb-1">Scan Actions</h3>
+        <p class="text-on-surface-variant text-sm">Auto-scan toggle switch, Re-scan button with busy spinner state, and a Report Listing button — all in one toolbar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resume Match Feature -->
+<section id="resume-match" class="py-20 md:py-28 border-t border-outline-variant/10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Feature</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Resume Match View</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
+        Switch tabs in the sidebar to compare your resume against the job listing's requirements.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">picture_as_pdf</span>
+        </div>
+        <h3 class="font-bold mb-1">Resume Card</h3>
+        <p class="text-on-surface-variant text-sm">Shows your active resume filename with a PDF icon, last-updated date, and an edit button to manage your resume.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">check_circle</span>
+        </div>
+        <h3 class="font-bold mb-1">Match Score</h3>
+        <p class="text-on-surface-variant text-sm">A numerical match score percentage with a compatibility label (e.g., "High Compatibility") and a visual progress bar.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">add</span>
+        </div>
+        <h3 class="font-bold mb-1">Skill Gaps</h3>
+        <p class="text-on-surface-variant text-sm">Lists missing skills with clickable "+" chips so you can add them to your learning roadmap or update your resume.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">rocket_launch</span>
+        </div>
+        <h3 class="font-bold mb-1">Apply with Match</h3>
+        <p class="text-on-surface-variant text-sm">A gold action button to launch your application with your matched resume, plus a footer with Legal and Privacy links.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Element Picker Feature -->
+<section id="element-picker" class="py-20 md:py-28 gradient-dark border-t border-outline-variant/10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Feature</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Visual Element Picker</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
+        Select any DOM element on a page with a visual overlay. The content script communicates with the sidebar in real-time.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-black">ads_click</span>
           </div>
           <div>
-            <h3 class="text-xl font-bold mb-2">Scam Scan</h3>
-            <p class="text-on-surface-variant text-sm leading-relaxed">
-              Visually select any job posting element and run an AI-powered scam analysis.
-              Detects unprofessional domains, vague salary ranges, AI-generated content, and more.
-            </p>
+            <h3 class="font-bold">Picker States</h3>
+            <span class="text-secondary text-xs">Idle &bull; Selecting &bull; Active &bull; Selected</span>
+          </div>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed">
+          The picker button cycles through four states: idle ("Pick Element"), activating (pulsing "Selecting..."),
+          active ("Cancel Selection" in red), and the selected element panel showing metadata and screenshot.
+        </p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-black">crop</span>
+          </div>
+          <div>
+            <h3 class="font-bold">Visual Overlay</h3>
+            <span class="text-secondary text-xs">Crosshair &bull; Blue highlight</span>
+          </div>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed">
+          When active, a blue highlight overlay follows your mouse across elements. The cursor changes to crosshair.
+          A toast notification confirms picker mode. Press Escape to cancel anytime.
+        </p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-black">screenshot_monitor</span>
+          </div>
+          <div>
+            <h3 class="font-bold">Screenshot Capture</h3>
+            <span class="text-secondary text-xs">Region crop &bull; Data URL</span>
+          </div>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed">
+          Each selected element is captured as a cropped PNG screenshot via the browser's tab capture API.
+          The screenshot is displayed alongside the element's tag name, ID, class, and text content.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup Panel Feature -->
+<section id="popup" class="py-20 md:py-28 border-t border-outline-variant/10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Feature</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Popup Panel</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
+        The small popup that appears when you click the Trabahero toolbar icon. Your launchpad to the full sidebar.
+      </p>
+    </div>
+    <div class="max-w-lg mx-auto bg-surface-container rounded-2xl p-8 border border-outline-variant/10">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="material-symbols-outlined text-secondary text-2xl">security</span>
+        <div>
+          <div class="font-bold text-lg gradient-gold bg-clip-text text-transparent">Trabahero</div>
+          <div class="text-xs text-on-surface-variant">AI-powered job scam detection &amp; resume matching for Filipino job seekers</div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 mb-5">
+        <div class="bg-surface rounded-xl p-4 border border-outline-variant/10 flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary">security</span>
+          <div>
+            <div class="font-semibold text-sm">Scam Scan</div>
+            <div class="text-xs text-on-surface-variant">Detect fraudulent listings in real-time</div>
+          </div>
+        </div>
+        <div class="bg-surface rounded-xl p-4 border border-outline-variant/10 flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary">description</span>
+          <div>
+            <div class="font-semibold text-sm">Resume Match</div>
+            <div class="text-xs text-on-surface-variant">Compare your resume to job requirements</div>
           </div>
         </div>
       </div>
-      <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-black">picture_as_pdf</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Resume Match</h3>
-            <p class="text-on-surface-variant text-sm leading-relaxed">
-              Upload your resume and compare it against the job listing's requirements.
-              See your compatibility score and identify skill gaps at a glance.
-            </p>
-          </div>
-        </div>
+      <div class="gradient-gold text-black font-bold py-3 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined text-sm">open_in_new</span>
+        Open Trabahero
       </div>
-      <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-black">touch_app</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Multi-Select Picker</h3>
-            <p class="text-on-surface-variant text-sm leading-relaxed">
-              Select multiple elements from a single page. Each pick is captured as a screenshot
-              with metadata, giving you a complete picture of the listing.
-            </p>
-          </div>
+      <div class="mt-5 text-center text-xs text-on-surface-variant/60">&copy; 2024 Trabahero</div>
+    </div>
+  </div>
+</section>
+
+<!-- Sidebar UI Feature -->
+<section class="py-20 md:py-28 gradient-dark border-t border-outline-variant/10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-secondary font-semibold text-sm tracking-widest uppercase">UX</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Sidebar Interface</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
+        The full extension experience lives in a Chrome side panel with a taskbar-style navigation.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">file_download</span>
         </div>
+        <h3 class="font-bold mb-1">Top App Bar</h3>
+        <p class="text-on-surface-variant text-sm">Sticky header with the Trabahero brand name in gold gradient, plus Help and Settings icon buttons.</p>
       </div>
-      <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-black">bolt</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Real-Time Analysis</h3>
-            <p class="text-on-surface-variant text-sm leading-relaxed">
-              All scanning happens live in your browser sidebar. No page reloads,
-              no external tabs — just instant feedback as you browse.
-            </p>
-          </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">tab</span>
         </div>
+        <h3 class="font-bold mb-1">Side Navigation</h3>
+        <p class="text-on-surface-variant text-sm">80px-wide vertical nav bar with two tabs — Scan (security icon) and Match (description icon). Active tab gets a gold gradient highlight.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">contact_support</span>
+        </div>
+        <h3 class="font-bold mb-1">Bottom Actions</h3>
+        <p class="text-on-surface-variant text-sm">Contact support and open-in-new icons pinned at the bottom of the side nav for quick access.</p>
+      </div>
+      <div class="bg-surface-container rounded-2xl p-6 card-hover border border-outline-variant/10">
+        <div class="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center mb-3">
+          <span class="material-symbols-outlined text-black">gavel</span>
+        </div>
+        <h3 class="font-bold mb-1">Footer Links</h3>
+        <p class="text-on-surface-variant text-sm">Legal and Privacy links in the sidebar footer, plus copyright text.</p>
       </div>
     </div>
   </div>
@@ -231,30 +403,34 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
     <div class="text-center mb-16">
       <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Technology</span>
       <h2 class="text-3xl md:text-4xl font-bold mt-3">Built With Modern Tools</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
+        Trabahero is built as a Manifest V3 Chrome extension with a React frontend and TypeScript throughout.
+      </p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <h3 class="text-lg font-bold mb-1">Machine Learning</h3>
-        <span class="text-secondary text-sm font-semibold">Scam Pattern Detection</span>
+        <h3 class="text-lg font-bold mb-1">Framework</h3>
+        <span class="text-secondary text-sm font-semibold">WXT + React 19 + TypeScript</span>
         <p class="text-on-surface-variant text-sm mt-4 leading-relaxed">
-          Trabahero uses ML models trained on known job scam datasets to classify listings
-          as high-risk, suspicious, or safe based on textual and structural features.
+          Built with WXT (Next-gen Web Extension framework), React 19, and TypeScript.
+          Tailwind CSS for styling with a custom dark "Sentinel Path" design system.
         </p>
       </div>
       <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <h3 class="text-lg font-bold mb-1">Browser Extension</h3>
-        <span class="text-secondary text-sm font-semibold">WXT + React + TypeScript</span>
+        <h3 class="text-lg font-bold mb-1">Permissions</h3>
+        <span class="text-secondary text-sm font-semibold">activeTab &bull; storage &bull; tabs &bull; sidePanel</span>
         <p class="text-on-surface-variant text-sm mt-4 leading-relaxed">
-          Built as a modern Chrome extension using WXT, React 19, and TypeScript.
-          Content scripts analyze DOM elements while the sidepanel provides the UI.
+          Minimal Chrome permissions: activeTab for the current page, storage for preferences,
+          tabs for tab communication, and sidePanel for the sidebar UI.
+          Host permissions for <code class="text-secondary">&lt;all_urls&gt;</code> and local dev server.
         </p>
       </div>
       <div class="bg-surface-container rounded-2xl p-8 card-hover border border-outline-variant/10">
-        <h3 class="text-lg font-bold mb-1">Visual Element Capture</h3>
-        <span class="text-secondary text-sm font-semibold">DOM + Screenshot Pipeline</span>
+        <h3 class="text-lg font-bold mb-1">Architecture</h3>
+        <span class="text-secondary text-sm font-semibold">4 Entrypoints &bull; 19 Components</span>
         <p class="text-on-surface-variant text-sm mt-4 leading-relaxed">
-          Every selected element is captured both structurally (tag, id, class, text) and visually
-          (screenshot region) for comprehensive analysis.
+          Four entrypoints (background, content script, popup, sidepanel) working together via
+          Chrome's message passing API. Nineteen React components organized into shell, scan, match, and common groups.
         </p>
       </div>
     </div>
@@ -268,7 +444,7 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
       <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Meet the Team</span>
       <h2 class="text-3xl md:text-4xl font-bold mt-3">The People Behind Trabahero</h2>
       <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">
-        A team of developers and researchers committed to protecting Filipino job seekers from online employment scams.
+        A team of developers, ML engineers, and researchers committed to protecting Filipino job seekers from online employment scams.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -277,21 +453,21 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
           <span class="material-symbols-outlined text-black text-2xl">person</span>
         </div>
         <h3 class="font-bold">Project Lead</h3>
-        <p class="text-on-surface-variant text-sm">ML & Development</p>
+        <p class="text-on-surface-variant text-sm">ML &amp; Development</p>
       </div>
       <div class="bg-surface-container rounded-2xl p-6 text-center card-hover border border-outline-variant/10">
         <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-4">
           <span class="material-symbols-outlined text-black text-2xl">person</span>
         </div>
         <h3 class="font-bold">Full Stack Developer</h3>
-        <p class="text-on-surface-variant text-sm">Frontend & Extension</p>
+        <p class="text-on-surface-variant text-sm">Frontend &amp; Extension</p>
       </div>
       <div class="bg-surface-container rounded-2xl p-6 text-center card-hover border border-outline-variant/10">
         <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-4">
           <span class="material-symbols-outlined text-black text-2xl">person</span>
         </div>
         <h3 class="font-bold">Backend Developer</h3>
-        <p class="text-on-surface-variant text-sm">ML & API</p>
+        <p class="text-on-surface-variant text-sm">ML &amp; API</p>
       </div>
     </div>
   </div>
@@ -343,7 +519,7 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
       <p>Trabahero is a Chrome extension that helps protect Filipino job seekers from employment scams. We designed Trabahero to analyze job listings primarily on your device, minimizing the data that leaves your browser.</p>
 
       <h3 class="text-on-surface font-bold text-base pt-2">What Trabahero Accesses</h3>
-      <p>To provide job scam detection, Trabahero's content scripts access DOM content of job listing elements you explicitly select for analysis. We store user preferences (e.g., scan settings) locally via chrome.storage.</p>
+      <p>To provide job scam detection, Trabahero's content scripts access DOM content of job listing elements you explicitly select for analysis. We store user preferences (e.g., scan settings, auto-scan toggle) locally via chrome.storage. The background service worker opens the side panel when you click the toolbar icon.</p>
       <p>We do not read passwords, form inputs, private messages, or your browsing history beyond the elements you choose to scan.</p>
 
       <h3 class="text-on-surface font-bold text-base pt-2">Data Processing</h3>
@@ -353,7 +529,7 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
       <p>We do not collect names, emails, passwords, financial information, location data, or browsing history. We do not use advertising networks or analytics services.</p>
 
       <h3 class="text-on-surface font-bold text-base pt-2">User Control</h3>
-      <p>You can disable scanning at any time through the extension popup, adjust settings, or uninstall the extension to remove all local data.</p>
+      <p>You can disable auto-scanning at any time through the toggle in the scan view, adjust settings, or uninstall the extension to remove all local data.</p>
 
       <h3 class="text-on-surface font-bold text-base pt-2">Contact</h3>
       <p>For questions or concerns, please reach out through the Support Center above.</p>
@@ -369,8 +545,9 @@ body { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
       <span class="font-bold">Trabahero</span>
     </div>
     <div class="flex items-center gap-6 text-sm text-on-surface-variant">
-      <a href="#how-it-works" class="hover:text-secondary transition-colors">How It Works</a>
-      <a href="#features" class="hover:text-secondary transition-colors">Features</a>
+      <a href="#features" class="hover:text-secondary transition-colors">How It Works</a>
+      <a href="#scam-scan" class="hover:text-secondary transition-colors">Scam Scan</a>
+      <a href="#resume-match" class="hover:text-secondary transition-colors">Resume Match</a>
       <a href="#privacy" class="hover:text-secondary transition-colors">Privacy</a>
       <a href="#support" class="hover:text-secondary transition-colors">Support</a>
     </div>
