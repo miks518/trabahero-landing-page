@@ -52,7 +52,7 @@ export default function CoreFeatures() {
         <div className="md:col-span-12 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col md:flex-row items-center gap-12 reveal reveal-delay-3">
           <div className="flex-1 space-y-6">
             <h3 className="font-headline-lg text-headline-lg">Instant Security Alerts</h3>
-            <p className="text-on-surface-variant font-body-lg">Get notified the second you land on a suspicious listing. Our intrusive—yet elegant—alerts ensure you never miss a red flag.</p>
+            <p className="text-on-surface-variant font-body-lg">Get notified the second you land on a suspicious listing. Our intrusive - yet elegant - alerts ensure you never miss a red flag.</p>
             <div className="flex flex-wrap gap-4">
               <div className="tactile-sunken px-4 py-2 rounded-full flex items-center gap-2 text-on-surface font-label-md">
                 <span className="material-symbols-outlined text-secondary">notifications_active</span>

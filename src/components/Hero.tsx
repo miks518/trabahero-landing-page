@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="flex gap-stack-md pt-4">
           <button className="beveled-gold-btn px-8 py-4 rounded-lg font-bold text-lg text-on-secondary flex items-center gap-2 group">
             <span className="material-symbols-outlined">extension</span>
-            Add to Chrome — Free
+            Add to Chrome - Free
           </button>
         </div>
         <div className="flex items-center gap-4 text-outline font-label-sm pt-4">

@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
           <h3 className="text-on-surface font-bold text-base pt-2">6) User Rights and Control</h3>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong className="text-on-surface">Disable Scanning:</strong> You can disable the auto-scan feature at any time through the toggle switch in the Scan view.</li>
-            <li><strong className="text-on-surface">Manual Control:</strong> Use the element picker only when you want to scan a specific listing — nothing is analyzed without your action.</li>
+            <li><strong className="text-on-surface">Manual Control:</strong> Use the element picker only when you want to scan a specific listing - nothing is analyzed without your action.</li>
             <li><strong className="text-on-surface">Uninstall:</strong> Remove the extension completely to stop all data processing.</li>
             <li><strong className="text-on-surface">Data Deletion:</strong> When you uninstall the extension, all local data is automatically removed. Server-side cached data is deleted after 7 days.</li>
           </ul>
