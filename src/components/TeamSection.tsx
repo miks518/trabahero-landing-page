@@ -4,6 +4,7 @@ const team = [
   { name: 'Denzel Capulong' },
   { name: 'John Uriel Garcia' },
   { name: 'Princess Myr Manquil' },
+  { name: 'Neil Andrei Manuntag' },
 ];
 
 export default function TeamSection() {
@@ -14,7 +15,7 @@ export default function TeamSection() {
           <h2 className="font-headline-lg text-headline-lg text-on-surface">Meet the Team Behind Trabahero</h2>
           <p className="text-outline max-w-2xl mx-auto font-body-md">A team of developers and researchers committed to protecting Filipino job seekers from online employment scams.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {team.map((member, i) => (
             <div key={member.name} className={`tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors reveal reveal-delay-${i + 1}`}>
               <div className="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
