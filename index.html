@@ -161,6 +161,49 @@
             animation: float 6s ease-in-out infinite;
             perspective: 1000px;
         }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* Hover glow pulse */
+        @keyframes glow-pulse {
+            0%, 100% { filter: drop-shadow(0 0 6px rgba(233, 195, 73, 0.2)); }
+            50% { filter: drop-shadow(0 0 16px rgba(233, 195, 73, 0.5)); }
+        }
+        .glow-pulse {
+            animation: glow-pulse 3s ease-in-out infinite;
+        }
+
+        /* Card scale entrance */
+        @keyframes scale-in {
+            from { opacity: 0; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .scale-in {
+            animation: scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Hero gradient orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+        }
     </style>
 </head>
 <body class="font-body-md bg-background">
@@ -183,8 +226,13 @@
 <main>
 <!-- Hero Section -->
 <section class="relative overflow-hidden pt-20 pb-32 px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-<div class="flex-1 space-y-stack-lg z-10">
-<h1 class="font-headline-xl text-headline-xl metallic-gold-text leading-tight">
+<div class="absolute inset-0 opacity-40 pointer-events-none">
+<div class="orb" style="width:500px;height:500px;background:rgba(233,195,73,0.08);top:-10%;left:-10%;" data-speed="0.02"></div>
+<div class="orb" style="width:400px;height:400px;background:rgba(233,195,73,0.05);bottom:-10%;right:-5%;" data-speed="-0.03"></div>
+<div class="orb" style="width:300px;height:300px;background:rgba(233,195,73,0.06);top:40%;left:50%;" data-speed="0.015"></div>
+</div>
+<div class="flex-1 space-y-stack-lg z-10 reveal">
+<h1 class="font-headline-xl text-headline-xl metallic-gold-text leading-tight glow-pulse">
                     Secure Your Career Path
                 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
@@ -221,22 +269,22 @@
 <!-- Problem Section -->
 <section class="py-24 bg-surface-container-low">
 <div class="max-w-7xl mx-auto px-margin-desktop text-center space-y-12">
-<div class="space-y-4">
+<div class="space-y-4 reveal">
 <h2 class="font-headline-lg text-headline-lg text-on-surface">The Silent Epidemic</h2>
 <p class="text-outline max-w-2xl mx-auto font-body-md">Job scams increased by 250% last year. Fraudsters are becoming more sophisticated, impersonating top firms to steal your identity and money.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors reveal reveal-delay-1">
 <span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">dangerous</span>
 <h3 class="font-headline-md text-headline-md text-on-surface">Fake Listings</h3>
 <p class="text-outline font-body-md">Scammers create phantom roles to collect sensitive personal data and financial information.</p>
 </div>
-<div class="tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors reveal reveal-delay-2">
 <span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">shield_with_heart</span>
 <h3 class="font-headline-md text-headline-md text-on-surface">Identity Theft</h3>
 <p class="text-outline font-body-md">Your resume is a goldmine for bad actors. Protect your private history from malicious intent.</p>
 </div>
-<div class="tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors reveal reveal-delay-3">
 <span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">monetization_on</span>
 <h3 class="font-headline-md text-headline-md text-on-surface">Advance-Fee Fraud</h3>
 <p class="text-outline font-body-md">Never pay for a job. Trabahero flags requests for equipment fees or training costs instantly.</p>
@@ -246,10 +294,10 @@
 </section>
 <!-- 3D Grid Core Features -->
 <section class="py-32 px-margin-desktop max-w-7xl mx-auto">
-<h2 class="font-headline-lg text-headline-lg text-center mb-16 metallic-gold-text">Advanced Protective Intelligence</h2>
+<h2 class="font-headline-lg text-headline-lg text-center mb-16 metallic-gold-text reveal">Advanced Protective Intelligence</h2>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- Scam Scan -->
-<div class="md:col-span-7 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="md:col-span-7 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col md:flex-row gap-8 items-center reveal reveal-delay-1">
 <div class="flex-1 space-y-4">
 <div class="inline-block px-3 py-1 rounded bg-secondary-container/20 text-secondary border border-secondary/30 font-label-sm">CORE TECH</div>
 <h3 class="font-headline-lg text-headline-lg">Scam Scan Engine</h3>
@@ -273,7 +321,7 @@
 </div>
 </div>
 <!-- Resume Match -->
-<div class="md:col-span-5 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col justify-between">
+<div class="md:col-span-5 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col justify-between reveal reveal-delay-2">
 <div class="space-y-4">
 <span class="material-symbols-outlined text-secondary text-5xl">person_search</span>
 <h3 class="font-headline-md text-headline-md">Resume Match</h3>
@@ -290,7 +338,7 @@
 </div>
 </div>
 <!-- Instant Alerts -->
-<div class="md:col-span-12 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col md:flex-row items-center gap-12">
+<div class="md:col-span-12 tactile-raised machined-edge rounded-2xl bg-surface-container p-10 flex flex-col md:flex-row items-center gap-12 reveal reveal-delay-3">
 <div class="flex-1 space-y-6">
 <h3 class="font-headline-lg text-headline-lg">Instant Security Alerts</h3>
 <p class="text-on-surface-variant font-body-lg">Get notified the second you land on a suspicious listing. Our intrusive—yet elegant—alerts ensure you never miss a red flag.</p>
@@ -329,12 +377,12 @@
 <!-- Team Section -->
 <section id="team" class="py-24 bg-surface-container-low">
 <div class="max-w-7xl mx-auto px-margin-desktop text-center space-y-12">
-<div class="space-y-4">
+<div class="space-y-4 reveal">
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Meet the Team Behind Trabahero</h2>
 <p class="text-outline max-w-2xl mx-auto font-body-md">A team of developers and researchers committed to protecting Filipino job seekers from online employment scams.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors reveal reveal-delay-1">
 <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
 <span class="material-symbols-outlined text-black text-2xl">person</span>
 </div>
@@ -346,19 +394,19 @@
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">Georich Mikko Yuzon</h4>
 </div>
-<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors reveal reveal-delay-3">
 <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
 <span class="material-symbols-outlined text-black text-2xl">person</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">Denzel Capulong</h4>
 </div>
-<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors reveal reveal-delay-4">
 <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
 <span class="material-symbols-outlined text-black text-2xl">person</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">John Uriel Garcia</h4>
 </div>
-<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors reveal reveal-delay-5">
 <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
 <span class="material-symbols-outlined text-black text-2xl">person</span>
 </div>
@@ -371,11 +419,11 @@
 <section class="py-16 border-y border-outline-variant bg-surface-container-lowest">
 <div class="max-w-7xl mx-auto px-margin-desktop">
 <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-<div class="text-center md:text-left">
+<div class="text-center md:text-left reveal">
 <h4 class="font-headline-md text-headline-md text-on-surface">Works Everywhere</h4>
 <p class="text-outline font-label-md">Integrated with 50+ job boards globally</p>
 </div>
-<div class="flex flex-wrap justify-center gap-12 grayscale opacity-40">
+<div class="flex flex-wrap justify-center gap-12 grayscale opacity-40 reveal reveal-delay-1">
 <div class="flex items-center gap-2 font-bold text-2xl text-on-surface"><span class="material-symbols-outlined">work</span> LinkedIn</div>
 <div class="flex items-center gap-2 font-bold text-2xl text-on-surface"><span class="material-symbols-outlined">search</span> Indeed</div>
 <div class="flex items-center gap-2 font-bold text-2xl text-on-surface"><span class="material-symbols-outlined">grid_view</span> Glassdoor</div>
@@ -387,30 +435,30 @@
 <!-- Technology Section -->
 <section id="technology" class="py-24">
 <div class="max-w-7xl mx-auto px-margin-desktop">
-<div class="text-center space-y-4 mb-16">
+<div class="text-center space-y-4 mb-16 reveal">
 <h2 class="font-headline-lg text-headline-lg metallic-gold-text">Technology Used</h2>
 <p class="text-outline max-w-2xl mx-auto font-body-md">The tools, models, and infrastructure powering Trabahero's scam detection pipeline.</p>
 </div>
 
 <div class="space-y-12">
 <div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">cloud</span> Backend &amp; APIs</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3 reveal"><span class="material-symbols-outlined text-secondary">cloud</span> Backend &amp; APIs</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center reveal reveal-delay-1">
 <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
 <span class="material-symbols-outlined text-black text-2xl">api</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">FastAPI</h4>
 <p class="text-outline font-body-md mt-2">High-performance Python backend framework handling the scam detection API endpoints and serving ML model predictions.</p>
 </div>
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center reveal reveal-delay-2">
 <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
 <span class="material-symbols-outlined text-black text-2xl">document_scanner</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">RapidOCR</h4>
 <p class="text-outline font-body-md mt-2">Optical character recognition engine that extracts text from selected element screenshots for content analysis.</p>
 </div>
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center reveal reveal-delay-3">
 <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
 <span class="material-symbols-outlined text-black text-2xl">smart_toy</span>
 </div>
@@ -421,24 +469,24 @@
 </div>
 
 <div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">model_training</span> ML Models &amp; Training</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3 reveal"><span class="material-symbols-outlined text-secondary">model_training</span> ML Models &amp; Training</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center reveal reveal-delay-1">
 <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
 <span class="material-symbols-outlined text-black text-2xl">memory</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">Unsloth Meta Llama 3 8B</h4>
 <p class="text-outline font-body-md mt-2">Fine-tuned 8-billion parameter LLM optimized for job scam classification using Unsloth's efficient training framework.</p>
 </div>
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center reveal reveal-delay-2">
 <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
 <span class="material-symbols-outlined text-black text-2xl">tune</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">QLoRA Finetune</h4>
 <p class="text-outline font-body-md mt-2">Quantized Low-Rank Adaptation technique enabling efficient fine-tuning of large language models with minimal GPU memory.</p>
 </div>
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
-<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center reveal reveal-delay-3">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-3">
 <span class="material-symbols-outlined text-black text-2xl">cloud</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-on-surface">Google Colab &amp; Tesla T4 GPU</h4>
@@ -451,7 +499,7 @@
 </section>
 <!-- Bottom CTA -->
 <section class="py-32 px-margin-desktop">
-<div class="max-w-4xl mx-auto tactile-raised machined-edge rounded-3xl p-16 text-center space-y-stack-lg relative overflow-hidden bg-surface-container">
+<div class="max-w-4xl mx-auto tactile-raised machined-edge rounded-3xl p-16 text-center space-y-stack-lg relative overflow-hidden bg-surface-container reveal">
 <div class="absolute top-0 right-0 p-8 opacity-10">
 <span class="material-symbols-outlined text-[120px] text-secondary">security</span>
 </div>
@@ -470,11 +518,11 @@
 <!-- Support Section -->
 <section id="support" class="py-24 bg-surface-container-low">
 <div class="max-w-xl mx-auto px-margin-desktop text-center space-y-8">
-<div class="space-y-4">
+<div class="space-y-4 reveal">
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Support Center</h2>
 <p class="text-outline font-body-md">Need help or want to share feedback? Reach out to us anytime.</p>
 </div>
-<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container reveal reveal-delay-1">
 <div class="flex items-center justify-center gap-3 mb-6">
 <span class="material-symbols-outlined text-secondary text-3xl">contact_support</span>
 <div class="text-left">
@@ -495,7 +543,7 @@
 <!-- Privacy Policy -->
 <section class="py-24 px-margin-desktop bg-surface-container-low">
 <div class="max-w-4xl mx-auto">
-<div class="text-center mb-12">
+<div class="text-center mb-12 reveal">
 <span class="text-secondary font-semibold text-sm tracking-widest uppercase">Privacy</span>
 <h2 class="font-headline-lg text-headline-lg text-on-surface mt-3">Privacy Policy</h2>
 </div>
@@ -617,26 +665,40 @@
 </div>
 </div>
 </footer>
-<!-- Simple Hover Interactivity -->
+<!-- Scroll Reveal + Mouse Parallax + Card Tilt -->
 <script>
+        // Scroll reveal observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mouse parallax orbs
+        document.addEventListener('mousemove', e => {
+            const orbs = document.querySelectorAll('.orb');
+            const x = e.clientX / window.innerWidth - 0.5;
+            const y = e.clientY / window.innerHeight - 0.5;
+            orbs.forEach(orb => {
+                const speed = parseFloat(orb.dataset.speed) || 0.02;
+                orb.style.transform = `translate(${x * speed * 1000}px, ${y * speed * 1000}px)`;
+            });
+        });
+
+        // Card tilt effect
         document.querySelectorAll('.tactile-raised').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-                
-                // Subtle tilt effect
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 50;
-                const rotateY = (centerX - x) / 50;
-                
+                const rotateX = (e.clientY - rect.top - centerY) / 50;
+                const rotateY = (centerX - (e.clientX - rect.left)) / 50;
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
             });
-            
             card.addEventListener('mouseleave', () => {
                 card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
             });
