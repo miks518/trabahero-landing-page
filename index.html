@@ -172,8 +172,8 @@
             </div>
 <div class="hidden md:flex items-center gap-stack-lg">
 <a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="#">Features</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#">Security</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#">Pricing</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#technology">Technology</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#team">Team</a>
 </div>
 <button class="beveled-gold-btn px-6 py-2 rounded text-on-secondary font-bold transition-all active:translate-y-px active:shadow-inner hover:scale-105">
                 Add to Chrome
@@ -326,6 +326,47 @@
 </div>
 </div>
 </section>
+<!-- Team Section -->
+<section id="team" class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-desktop text-center space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Meet the Team Behind Trabahero</h2>
+<p class="text-outline max-w-2xl mx-auto font-body-md">A team of developers and researchers committed to protecting Filipino job seekers from online employment scams.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-black text-2xl">person</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Janzel Garcia</h4>
+</div>
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-black text-2xl">person</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Georich Mikko Yuzon</h4>
+</div>
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-black text-2xl">person</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Denzel Capulong</h4>
+</div>
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-black text-2xl">person</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">John Uriel Garcia</h4>
+</div>
+<div class="tactile-sunken p-6 rounded-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-black text-2xl">person</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Princess Myr Manquil</h4>
+</div>
+</div>
+</div>
+</section>
 <!-- Social Proof -->
 <section class="py-16 border-y border-outline-variant bg-surface-container-lowest">
 <div class="max-w-7xl mx-auto px-margin-desktop">
@@ -339,6 +380,71 @@
 <div class="flex items-center gap-2 font-bold text-2xl text-on-surface"><span class="material-symbols-outlined">search</span> Indeed</div>
 <div class="flex items-center gap-2 font-bold text-2xl text-on-surface"><span class="material-symbols-outlined">grid_view</span> Glassdoor</div>
 <div class="flex items-center gap-2 font-bold text-2xl text-on-surface"><span class="material-symbols-outlined">bolt</span> Monster</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology Section -->
+<section id="technology" class="py-24">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="text-center space-y-4 mb-16">
+<h2 class="font-headline-lg text-headline-lg metallic-gold-text">Technology Used</h2>
+<p class="text-outline max-w-2xl mx-auto font-body-md">The tools, models, and infrastructure powering Trabahero's scam detection pipeline.</p>
+</div>
+
+<div class="space-y-12">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">cloud</span> Backend &amp; APIs</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-black text-2xl">api</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">FastAPI</h4>
+<p class="text-outline font-body-md mt-2">High-performance Python backend framework handling the scam detection API endpoints and serving ML model predictions.</p>
+</div>
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-black text-2xl">document_scanner</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">RapidOCR</h4>
+<p class="text-outline font-body-md mt-2">Optical character recognition engine that extracts text from selected element screenshots for content analysis.</p>
+</div>
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-black text-2xl">smart_toy</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Ollama</h4>
+<p class="text-outline font-body-md mt-2">Local LLM runtime for running inference on fine-tuned scam detection models directly on the server.</p>
+</div>
+</div>
+</div>
+
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">model_training</span> ML Models &amp; Training</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-black text-2xl">memory</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Unsloth Meta Llama 3 8B</h4>
+<p class="text-outline font-body-md mt-2">Fine-tuned 8-billion parameter LLM optimized for job scam classification using Unsloth's efficient training framework.</p>
+</div>
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-black text-2xl">tune</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">QLoRA Finetune</h4>
+<p class="text-outline font-body-md mt-2">Quantized Low-Rank Adaptation technique enabling efficient fine-tuning of large language models with minimal GPU memory.</p>
+</div>
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container text-center">
+<div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-black text-2xl">cloud</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Google Colab &amp; Tesla T4 GPU</h4>
+<p class="text-outline font-body-md mt-2">Model training accelerated by Tesla T4 GPUs on Google Colab, providing the compute power needed for LLM fine-tuning.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -358,6 +464,30 @@
                         Start Scanning Securely
                     </button>
 <p class="mt-4 text-outline font-label-sm">No credit card required. Free for all job seekers.</p>
+</div>
+</div>
+</section>
+<!-- Support Section -->
+<section id="support" class="py-24 bg-surface-container-low">
+<div class="max-w-xl mx-auto px-margin-desktop text-center space-y-8">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Support Center</h2>
+<p class="text-outline font-body-md">Need help or want to share feedback? Reach out to us anytime.</p>
+</div>
+<div class="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container">
+<div class="flex items-center justify-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">contact_support</span>
+<div class="text-left">
+<div class="font-bold text-on-surface">Email Us</div>
+<a href="mailto:trabahero+@gmail.com" class="text-secondary hover:underline font-label-md">trabahero+@gmail.com</a>
+</div>
+</div>
+<form class="flex flex-col gap-4 text-left">
+<input type="text" placeholder="Name" class="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm focus:outline-none focus:border-secondary transition-colors"/>
+<input type="email" placeholder="Email" class="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm focus:outline-none focus:border-secondary transition-colors"/>
+<textarea rows="4" placeholder="Your message..." class="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm focus:outline-none focus:border-secondary transition-colors resize-none"></textarea>
+<button class="beveled-gold-btn px-8 py-3 rounded-lg font-bold text-on-secondary">Submit</button>
+</form>
 </div>
 </div>
 </section>
@@ -444,7 +574,22 @@
 <li>Results are cached locally to avoid duplicate scans.</li>
 </ul>
 
-<h3 class="text-on-surface font-bold text-base pt-2">8) Chrome Web Store Disclosures</h3>
+<h3 class="text-on-surface font-bold text-base pt-2">8) Third Parties</h3>
+<ul class="list-disc pl-5 space-y-1">
+<li>We do not sell or share user data with advertisers.</li>
+<li>If we ever use a sub-processor (e.g., for secure hosting), it will be bound by confidentiality and data protection obligations.</li>
+</ul>
+
+<h3 class="text-on-surface font-bold text-base pt-2">9) Changes to This Policy</h3>
+<p>We may update this privacy policy to reflect changes in our practices or legal requirements. We will notify users of significant changes through the extension's update mechanism.</p>
+
+<h3 class="text-on-surface font-bold text-base pt-2">10) Copyright Policy</h3>
+<p>All images featured on this landing page and within the extension are either owned by the development team or generated using AI tools. The Trabahero name and branding are protected.</p>
+
+<h3 class="text-on-surface font-bold text-base pt-2">11) Security Disclosure</h3>
+<p>If you discover a security vulnerability in Trabahero, please report it responsibly through our GitHub repository at <a href="https://github.com/miks518/trabahero-landing-page" class="text-secondary hover:underline">https://github.com/miks518/trabahero-landing-page</a>. We take security issues seriously and will respond promptly to legitimate reports.</p>
+
+<h3 class="text-on-surface font-bold text-base pt-2">12) Chrome Web Store Disclosures</h3>
 <ul class="list-disc pl-5 space-y-1">
 <li><strong class="text-on-surface">Purpose limitation:</strong> Data accessed by Trabahero is used only to provide scam detection and resume matching features.</li>
 <li><strong class="text-on-surface">Limited Use:</strong> We do not use data for unrelated purposes like advertising or profiling.</li>
@@ -452,8 +597,8 @@
 <li><strong class="text-on-surface">Control:</strong> Users can disable, remove, or change settings at any time.</li>
 </ul>
 
-<h3 class="text-on-surface font-bold text-base pt-2">9) Contact Us</h3>
-<p>If you have questions or requests related to privacy, please reach out through the Support Center above or contact us via our GitHub repository. We take privacy and security issues seriously and will respond promptly to legitimate concerns.</p>
+<h3 class="text-on-surface font-bold text-base pt-2">13) Contact Us</h3>
+<p>If you have questions or requests related to privacy, please reach out at <strong class="text-on-surface">trabahero+@gmail.com</strong> or through our GitHub repository. We take privacy and security issues seriously and will respond promptly to legitimate concerns.</p>
 </div>
 </div>
 </section>
