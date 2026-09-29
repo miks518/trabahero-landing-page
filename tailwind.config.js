@@ -48,6 +48,9 @@ export default {
         "error": "#ffb4ab",
         "on-secondary": "#303031",
         "surface-variant-high": "#3f4045",
+        "positive": "#4ade80",
+        "caution": "#facc15",
+        "danger": "#f87171",
       },
       fontFamily: {
         'body-md': ['Inter', 'system-ui', 'sans-serif'],
@@ -62,6 +65,7 @@ export default {
         'headline-xl': ['3.5rem', { lineHeight: '1.1', fontWeight: '800' }],
         'headline-lg': ['2.5rem', { lineHeight: '1.2', fontWeight: '700' }],
         'headline-md': ['1.25rem', { lineHeight: '1.3', fontWeight: '700' }],
+        'headline-sm': ['1rem', { lineHeight: '1.4', fontWeight: '700' }],
         'body-lg': ['1.125rem', { lineHeight: '1.6' }],
         'body-md': ['0.9375rem', { lineHeight: '1.6' }],
         'label-md': ['0.875rem', { lineHeight: '1.4', fontWeight: '500' }],

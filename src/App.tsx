@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
+import HowItWorks from './components/HowItWorks';
 import CoreFeatures from './components/CoreFeatures';
+import RiskScoreSection from './components/RiskScoreSection';
 import SocialProof from './components/SocialProof';
 import TechnologySection from './components/TechnologySection';
 import TeamSection from './components/TeamSection';
@@ -72,7 +74,9 @@ export default function App() {
       <main>
         <Hero />
         <ProblemSection />
+        <HowItWorks />
         <CoreFeatures />
+        <RiskScoreSection />
         <SocialProof />
         <TechnologySection />
         <TeamSection />

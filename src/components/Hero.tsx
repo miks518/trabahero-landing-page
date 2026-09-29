@@ -1,46 +1,70 @@
+import PanelMock from './PanelMock';
+
+const CHIPS = [
+  { icon: 'photo_camera', label: 'Screenshot scan' },
+  { icon: 'gavel', label: 'Employer check with sources' },
+  { icon: 'work_history', label: 'Resume matching' },
+  { icon: 'lock', label: 'No account needed' },
+];
+
+const REPO_URL = 'https://github.com/miks518/traba-hero';
+
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-32 px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-      <div className="absolute inset-0 opacity-40 pointer-events-none">
+    <section className="relative overflow-hidden pt-24 md:pt-28 pb-28 md:pb-36">
+      <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="orb" style={{ width: 500, height: 500, background: 'rgba(233,195,73,0.08)', top: '-10%', left: '-10%' }} data-speed="0.02" />
         <div className="orb" style={{ width: 400, height: 400, background: 'rgba(233,195,73,0.05)', bottom: '-10%', right: '-5%' }} data-speed="-0.03" />
-        <div className="orb" style={{ width: 300, height: 300, background: 'rgba(233,195,73,0.06)', top: '40%', left: '50%' }} data-speed="0.015" />
+        <div className="orb" style={{ width: 300, height: 300, background: 'rgba(120,80,255,0.05)', top: '45%', left: '55%' }} data-speed="0.015" />
       </div>
-      <div className="flex-1 space-y-stack-lg z-10 reveal">
-        <h1 className="font-headline-xl text-headline-xl metallic-gold-text leading-tight">
-          Secure Your Career Path
-        </h1>
-        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-          Don't let fraudsters derail your future. Trabahero is the premier Chrome extension that scans job postings in real-time to detect scams before you apply.
-        </p>
-        <div className="flex gap-stack-md pt-4">
-          <button className="beveled-gold-btn px-8 py-4 rounded-lg font-bold text-lg text-on-secondary flex items-center gap-2 group">
-            <span className="material-symbols-outlined">extension</span>
-            Add to Chrome - Free
-          </button>
-        </div>
-        <div className="flex items-center gap-4 text-outline font-label-sm pt-4">
-          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-secondary text-sm">verified</span> Verified Secure</span>
-          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-secondary text-sm">group</span> Demo Version</span>
-        </div>
-      </div>
-      <div className="flex-1 relative animate-float">
-        <div className="tactile-raised rounded-xl overflow-hidden machined-edge bg-surface-container shadow-2xl transform rotate-3">
-          <div className="bg-surface-container-highest p-4 flex items-center justify-between border-b border-outline-variant">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-error" />
-              <div className="w-3 h-3 rounded-full bg-secondary" />
-              <div className="w-3 h-3 rounded-full bg-primary-fixed-dim" />
-            </div>
-            <div className="text-on-surface-variant font-label-sm italic">trabahero-v2.0</div>
+
+      <div className="relative max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-14">
+        <div className="flex-1 space-y-stack-lg z-10 reveal">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/10 text-secondary text-label-sm font-semibold">
+            <span className="material-symbols-outlined text-sm">extension</span>
+            Chrome extension · Built for Filipino job seekers
+          </span>
+          <h1 className="font-headline-xl text-5xl md:text-6xl leading-[1.05] font-extrabold">
+            <span className="metallic-gold-text">Spot the scam</span>
+            <br />
+            before you reply.
+          </h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Trabahero reads a posting the way a careful friend would — what it asks of you, what it offers, and who is
+            really behind the company — then shows you the evidence and lets you decide.
+          </p>
+          <div className="flex flex-wrap gap-4 pt-2">
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="beveled-gold-btn px-8 py-4 rounded-lg font-bold text-lg text-on-secondary flex items-center gap-2 hover:scale-[1.03] transition-transform"
+            >
+              <span className="material-symbols-outlined">download</span>
+              Get the extension — free
+            </a>
+            <a
+              href="#how-it-works"
+              className="px-8 py-4 rounded-lg font-bold text-lg text-on-surface border border-outline-variant hover:border-secondary hover:text-secondary transition-colors flex items-center gap-2"
+            >
+              See how it works
+              <span className="material-symbols-outlined">arrow_downward</span>
+            </a>
           </div>
-          <img
-            className="w-full h-auto"
-            alt="Trabahero extension sidebar interface"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE8VzJMFTFZ_ZNhtn9XGccR8xItUrp3lNIcG0cp8PTMp_ZGe2Mk2SCvsJt6IbwZhEFPWZGbBF4jbpWon5Rj1A09xSbYzbE_mOErBJyVA5htwgYKfIB6xGtvfqzUmGunBn4Bk_PwqT-uLvYm3WJHUm6zjyS8x1VN97MUiR2lvfJgm21LSOjTrqz6EivXPMeoWwiw23_LD8vTkfBzI4yrVpploMmX6k1p9_xTiOzJs-mqalgnJraO4aBiISmduiwY-vtyCizKKfSEkYr"
-          />
+          <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-label-sm text-outline">
+            {CHIPS.map((chip) => (
+              <span key={chip.label} className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-secondary text-base">{chip.icon}</span>
+                {chip.label}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/10 blur-[120px] rounded-full" />
+
+        <div className="flex-1 w-full relative animate-float">
+          <PanelMock />
+        </div>
       </div>
     </section>
   );

@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #121317;
   color: #e3e2e7;
   overflow-x: hidden;
   font-family: 'Inter', system-ui, sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+::selection {
+  background: #e9c349;
+  color: #121317;
+}
+
+:focus-visible {
+  outline: 2px solid #e9c349;
+  outline-offset: 2px;
 }
 
 .material-symbols-outlined {
@@ -77,13 +95,54 @@ body {
   background: linear-gradient(145deg, #ffe087, #e9c349, #ae8d10);
 }
 
+/* Hairline gradient border; the card keeps its own background underneath. */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(140deg, rgba(233, 195, 73, 0.55), rgba(233, 195, 73, 0.04) 45%, rgba(233, 195, 73, 0.3));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Faint engineering grid that fades out downward. */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(233, 195, 73, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(233, 195, 73, 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 35%, transparent 100%);
+}
+
+.hover-lift {
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
 }
 
 .animate-float {
-  animation: float 5s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes scale-in {
@@ -93,6 +152,26 @@ body {
 
 .scale-in {
   animation: scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* The hero gauge draws itself to --ring-offset on load. */
+@keyframes ring-fill {
+  to { stroke-dashoffset: var(--ring-offset, 0); }
+}
+
+.ring-animate {
+  stroke-dasharray: 327;
+  stroke-dashoffset: 327;
+  animation: ring-fill 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -157,4 +236,24 @@ body {
   filter: blur(100px);
   pointer-events: none;
   transition: transform 0.1s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-float,
+  .scale-in,
+  .animate-pulse-dot {
+    animation: none !important;
+  }
+  .ring-animate {
+    animation: none !important;
+    stroke-dashoffset: var(--ring-offset, 0);
+  }
 }
