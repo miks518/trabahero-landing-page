@@ -15,21 +15,21 @@ export default function SupportSection() {
   };
 
   return (
-    <section id="support" className="py-24 bg-surface-container-low border-t border-outline-variant/40">
+    <section id="support" className="py-24 bg-surface-container-low border-t border-outline-variant/30">
       <div className="max-w-xl mx-auto px-margin-desktop text-center space-y-8">
         <div className="space-y-4 reveal">
-          <span className="text-secondary font-semibold text-sm tracking-widest uppercase">Support</span>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">Questions or feedback?</h2>
-          <p className="text-outline font-body-md">
+          <span className="text-primary font-semibold text-sm tracking-widest uppercase">Support</span>
+          <h2 className="font-headline text-headline-lg text-on-surface">Questions or feedback?</h2>
+          <p className="text-on-surface-variant font-body-md">
             The form opens your email app with the message ready to send — nothing is stored on a server.
           </p>
         </div>
-        <div className="tactile-raised machined-edge rounded-2xl p-8 bg-surface-container reveal reveal-delay-1">
+        <div className="card-base reveal reveal-delay-1 gradient-border">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="material-symbols-outlined text-secondary text-3xl">contact_support</span>
+            <span className="material-symbols-outlined text-primary text-3xl">contact_support</span>
             <div className="text-left">
               <div className="font-bold text-on-surface">Email us</div>
-              <a href={`mailto:${EMAIL}`} className="text-secondary hover:underline font-label-md">
+              <a href={`mailto:${EMAIL}`} className="text-primary hover:underline font-label-md">
                 {EMAIL}
               </a>
             </div>
@@ -39,21 +39,21 @@ export default function SupportSection() {
               name="name"
               type="text"
               placeholder="Name"
-              className="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary transition-colors"
+              className="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
             />
             <input
               name="email"
               type="email"
               placeholder="Email"
-              className="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary transition-colors"
+              className="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
             />
             <textarea
               name="message"
               rows={4}
               placeholder="Your message..."
-              className="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary transition-colors resize-none"
+              className="w-full bg-surface-container-low rounded-lg px-4 py-3 border border-outline-variant/30 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors resize-none"
             />
-            <button className="beveled-gold-btn px-8 py-3 rounded-lg font-bold text-on-secondary">Send message</button>
+            <button className="tactile-btn-accent px-8 py-3 rounded-lg font-bold text-on-secondary">Send message</button>
           </form>
         </div>
       </div>

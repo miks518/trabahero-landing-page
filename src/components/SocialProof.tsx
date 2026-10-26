@@ -9,12 +9,12 @@ const BOARDS = [
 
 export default function SocialProof() {
   return (
-    <section className="py-16 border-y border-outline-variant bg-surface-container-lowest">
+    <section className="py-16 border-y border-outline-variant/30 bg-surface-container-lowest/50">
       <div className="max-w-7xl mx-auto px-margin-desktop">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left reveal">
-            <h4 className="font-headline-md text-headline-md text-on-surface">Works wherever you find jobs</h4>
-            <p className="text-outline font-label-md">
+            <h4 className="font-headline text-headline-md text-on-surface">Works wherever you find jobs</h4>
+            <p className="text-on-surface-variant font-label-md">
               The element picker runs on any page — no integrations or partnerships required.
             </p>
           </div>

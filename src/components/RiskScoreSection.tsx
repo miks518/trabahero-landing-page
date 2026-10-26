@@ -25,12 +25,12 @@ const NOTES = [
 
 export default function RiskScoreSection() {
   return (
-    <section className="py-24 md:py-32">
+    <section id="risk-score" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 space-y-5 reveal">
-            <span className="text-secondary font-semibold text-sm tracking-widest uppercase">The risk score</span>
-            <h2 className="font-headline-lg text-headline-lg text-on-surface">
+            <span className="text-primary font-semibold text-sm tracking-widest uppercase">The risk score</span>
+            <h2 className="font-headline text-headline-lg text-on-surface">
               A number you can <span className="metallic-gold-text">trace back</span>
             </h2>
             <p className="text-on-surface-variant font-body-lg">
@@ -39,7 +39,7 @@ export default function RiskScoreSection() {
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               {BANDS.map((band) => (
-                <div key={band.label} className="flex items-center gap-2 text-label-sm text-outline">
+                <div key={band.label} className="flex items-center gap-2 text-label-sm text-on-surface-variant">
                   <span className={`w-3 h-3 rounded-sm ${band.cls}`} />
                   <span className="text-on-surface-variant font-medium">{band.label}</span>
                   <span>{band.range}</span>
@@ -48,17 +48,17 @@ export default function RiskScoreSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 tactile-raised machined-edge rounded-2xl bg-surface-container p-8 md:p-10 reveal reveal-delay-1">
+          <div className="lg:col-span-7 card-base reveal reveal-delay-1 gradient-border">
             <div className="space-y-3">
-              <div className="flex items-center justify-between text-label-sm text-outline">
+              <div className="flex items-center justify-between text-label-sm text-on-surface-variant">
                 <span>Posting indicators</span>
                 <span className="text-on-surface font-semibold">+ 41</span>
               </div>
               <div className="h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                <div className="h-full w-[41%] gradient-gold rounded-full" />
+                <div className="h-full w-[41%] bg-primary rounded-full" />
               </div>
 
-              <div className="flex items-center justify-between text-label-sm text-outline pt-2">
+              <div className="flex items-center justify-between text-label-sm text-on-surface-variant pt-2">
                 <span>Employer verification penalty</span>
                 <span className="text-on-surface font-semibold">+ 21</span>
               </div>
@@ -67,11 +67,11 @@ export default function RiskScoreSection() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-outline-variant/50">
+            <div className="mt-8 pt-6 border-t border-outline-variant/30">
               <div className="flex items-end justify-between mb-3">
                 <div>
-                  <div className="text-label-sm text-outline uppercase tracking-wider">Final score</div>
-                  <div className="text-4xl font-extrabold text-on-surface">62 <span className="text-lg text-outline font-bold">/ 100</span></div>
+                  <div className="text-label-sm text-on-surface-variant uppercase tracking-wider">Final score</div>
+                  <div className="text-4xl font-extrabold text-on-surface">62 <span className="text-lg text-on-surface-variant font-bold">/ 100</span></div>
                 </div>
                 <span className="px-3 py-1.5 rounded-full bg-[#f97316]/15 border border-[#f97316]/40 text-[#f97316] text-label-sm font-bold">
                   High risk
@@ -92,11 +92,11 @@ export default function RiskScoreSection() {
           {NOTES.map((note, i) => (
             <div
               key={note.title}
-              className={`tactile-raised machined-edge rounded-2xl p-7 bg-surface-container hover-lift reveal reveal-delay-${i + 1}`}
+              className={`card-base hover-lift reveal reveal-delay-${i + 1} gradient-border`}
             >
-              <span className="material-symbols-outlined text-secondary text-3xl mb-3 block">{note.icon}</span>
-              <h3 className="font-headline-md text-headline-md text-on-surface mb-2">{note.title}</h3>
-              <p className="text-outline font-body-md">{note.body}</p>
+              <span className="material-symbols-outlined text-primary text-3xl mb-3 block">{note.icon}</span>
+              <h3 className="font-headline text-headline-md text-on-surface mb-2">{note.title}</h3>
+              <p className="text-on-surface-variant font-body-md">{note.body}</p>
             </div>
           ))}
         </div>

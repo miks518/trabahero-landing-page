@@ -18,12 +18,12 @@ const PROBLEMS = [
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 bg-surface-container-low border-y border-outline-variant/40">
+    <section id="problem" className="py-24 bg-surface-container-low border-y border-outline-variant/30">
       <div className="max-w-7xl mx-auto px-margin-desktop text-center space-y-12">
         <div className="space-y-4 reveal">
-          <span className="text-secondary font-semibold text-sm tracking-widest uppercase">The problem</span>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">Job hunting is hard enough</h2>
-          <p className="text-outline max-w-2xl mx-auto font-body-md">
+          <span className="text-primary font-semibold text-sm tracking-widest uppercase">The problem</span>
+          <h2 className="font-headline text-headline-lg text-on-surface">Job hunting is hard enough</h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto font-body-md">
             Every week, Filipino job seekers lose money and personal data to postings that look ordinary until it is
             too late. Most of them share a few tells — if you know where to look.
           </p>
@@ -32,11 +32,11 @@ export default function ProblemSection() {
           {PROBLEMS.map((problem, i) => (
             <div
               key={problem.title}
-              className={`tactile-sunken p-8 rounded-xl space-y-4 bg-surface-container-lowest/50 group hover:bg-surface-container transition-colors reveal reveal-delay-${i + 1}`}
+              className={`card-base space-y-4 group hover-lift reveal reveal-delay-${i + 1}`}
             >
-              <span className="material-symbols-outlined text-secondary text-4xl">{problem.icon}</span>
-              <h3 className="font-headline-md text-headline-md text-on-surface">{problem.title}</h3>
-              <p className="text-outline font-body-md">{problem.body}</p>
+              <span className="material-symbols-outlined text-primary text-4xl">{problem.icon}</span>
+              <h3 className="font-headline text-headline-md text-on-surface">{problem.title}</h3>
+              <p className="text-on-surface-variant font-body-md">{problem.body}</p>
             </div>
           ))}
         </div>

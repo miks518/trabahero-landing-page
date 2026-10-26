@@ -30,12 +30,12 @@ const GROUPS = [
 
 export default function TechnologySection() {
   return (
-    <section id="technology" className="py-24 md:py-32 bg-surface-container-low border-y border-outline-variant/40">
+    <section id="technology" className="py-24 md:py-32 bg-surface-container-low border-y border-outline-variant/30">
       <div className="max-w-7xl mx-auto px-margin-desktop">
         <div className="text-center space-y-4 mb-16 reveal">
-          <span className="text-secondary font-semibold text-sm tracking-widest uppercase">Technology</span>
-          <h2 className="font-headline-lg text-headline-lg metallic-gold-text">How it is built</h2>
-          <p className="text-outline max-w-2xl mx-auto font-body-md">
+          <span className="text-primary font-semibold text-sm tracking-widest uppercase">Technology</span>
+          <h2 className="font-headline text-headline-lg metallic-gold-text">How it is built</h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto font-body-md">
             A browser extension, a thin FastAPI service, hosted models, and a web search that always hands you the
             receipts.
           </p>
@@ -44,21 +44,21 @@ export default function TechnologySection() {
         <div className="space-y-12">
           {GROUPS.map((group) => (
             <div key={group.heading}>
-              <h3 className="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3 reveal">
-                <span className="material-symbols-outlined text-secondary">{group.icon}</span>
+              <h3 className="font-headline text-headline-md text-on-surface mb-6 flex items-center gap-3 reveal">
+                <span className="material-symbols-outlined text-primary">{group.icon}</span>
                 {group.heading}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 {group.items.map((item, i) => (
                   <div
                     key={item.name}
-                    className={`tactile-raised machined-edge rounded-2xl p-8 bg-surface-container hover-lift reveal reveal-delay-${i + 1}`}
+                    className={`card-base hover-lift reveal reveal-delay-${i + 1} gradient-border`}
                   >
-                    <div className="w-14 h-14 rounded-xl gradient-gold flex items-center justify-center mb-4">
-                      <span className="material-symbols-outlined text-black text-2xl">{item.icon}</span>
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 border border-primary/30">
+                      <span className="material-symbols-outlined text-primary text-2xl">{item.icon}</span>
                     </div>
-                    <h4 className="font-headline-md text-headline-md text-on-surface">{item.name}</h4>
-                    <p className="text-outline font-body-md mt-2">{item.desc}</p>
+                    <h4 className="font-headline text-headline-md text-on-surface">{item.name}</h4>
+                    <p className="text-on-surface-variant font-body-md mt-2">{item.desc}</p>
                   </div>
                 ))}
               </div>
