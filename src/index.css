@@ -1,3 +1,75 @@
+:root {
+  --c-background: 18, 19, 23;
+  --c-on-background: 227, 226, 231;
+  --c-surface: 18, 19, 23;
+  --c-on-surface: 227, 226, 231;
+  --c-surface-dim: 18, 19, 23;
+  --c-surface-container-lowest: 13, 14, 18;
+  --c-surface-container-low: 26, 27, 31;
+  --c-surface-container: 30, 31, 35;
+  --c-surface-container-high: 41, 42, 46;
+  --c-surface-container-highest: 52, 53, 57;
+  --c-surface-variant: 52, 53, 57;
+  --c-surface-bright: 56, 57, 61;
+  --c-on-surface-variant: 199, 198, 202;
+  --c-outline: 144, 144, 148;
+  --c-outline-variant: 70, 71, 74;
+  --c-primary: 74, 222, 128;
+  --c-on-primary: 18, 19, 23;
+  --c-primary-container: 26, 58, 42;
+  --c-on-primary-container: 74, 222, 128;
+  --c-secondary: 233, 195, 73;
+  --c-on-secondary: 18, 19, 23;
+  --c-secondary-container: 174, 141, 16;
+  --c-on-secondary-container: 60, 47, 0;
+  --c-tertiary: 248, 113, 113;
+  --c-on-tertiary: 18, 19, 23;
+  --c-tertiary-container: 127, 29, 29;
+  --c-on-tertiary-container: 252, 165, 165;
+  --c-error: 248, 113, 113;
+  --c-on-error: 18, 19, 23;
+  --c-error-container: 127, 29, 29;
+  --c-on-error-container: 252, 165, 165;
+  --c-inverse-surface: 227, 226, 231;
+  --c-inverse-on-surface: 18, 19, 23;
+  --c-inverse-primary: 26, 58, 42;
+}
+html.light {
+  --c-background: 247, 247, 248;
+  --c-on-background: 26, 27, 31;
+  --c-surface: 247, 247, 248;
+  --c-on-surface: 26, 27, 31;
+  --c-surface-dim: 232, 232, 234;
+  --c-surface-container-lowest: 255, 255, 255;
+  --c-surface-container-low: 240, 240, 242;
+  --c-surface-container: 232, 232, 234;
+  --c-surface-container-high: 220, 220, 224;
+  --c-surface-container-highest: 208, 208, 212;
+  --c-surface-variant: 208, 208, 212;
+  --c-surface-bright: 255, 255, 255;
+  --c-on-surface-variant: 74, 75, 80;
+  --c-outline: 122, 122, 126;
+  --c-outline-variant: 200, 200, 204;
+  --c-primary: 22, 163, 74;
+  --c-on-primary: 255, 255, 255;
+  --c-primary-container: 220, 252, 231;
+  --c-on-primary-container: 22, 101, 52;
+  --c-secondary: 180, 83, 9;
+  --c-on-secondary: 255, 255, 255;
+  --c-secondary-container: 254, 243, 199;
+  --c-on-secondary-container: 120, 53, 15;
+  --c-tertiary: 220, 38, 38;
+  --c-on-tertiary: 255, 255, 255;
+  --c-tertiary-container: 254, 226, 226;
+  --c-on-tertiary-container: 153, 27, 27;
+  --c-error: 220, 38, 38;
+  --c-on-error: 255, 255, 255;
+  --c-error-container: 254, 226, 226;
+  --c-on-error-container: 153, 27, 27;
+  --c-inverse-surface: 26, 27, 31;
+  --c-inverse-on-surface: 247, 247, 248;
+  --c-inverse-primary: 74, 222, 128;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,12 +81,32 @@ html {
 
 body {
   margin: 0;
-  background-color: #121317;
-  color: #e3e2e7;
+  background-color: rgb(var(--c-background));
+  color: rgb(var(--c-on-background));
+  position: relative;
   overflow-x: hidden;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 14px;
   line-height: 1.6;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 20%, rgb(var(--c-primary-container)) 0%, transparent 45%),
+    radial-gradient(circle at 80% 10%, rgb(var(--c-secondary-container)) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgb(var(--c-tertiary-container)) 0%, transparent 45%);
+  opacity: 0.35;
+  filter: blur(60px);
+  animation: mesh-drift 18s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes mesh-drift {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(4%, -3%) scale(1.05); }
+  100% { transform: translate(-3%, 4%) scale(1.02); }
 }
 
 section[id] {

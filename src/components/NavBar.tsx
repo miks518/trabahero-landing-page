@@ -31,6 +31,18 @@ export default function NavBar() {
             </a>
           ))}
         </div>
+        <button
+          type="button"
+          aria-label="Toggle light and dark mode"
+          onClick={() => {
+            const el = document.documentElement;
+            const isLight = el.classList.toggle('light');
+            localStorage.setItem('th-theme', isLight ? 'light' : 'dark');
+          }}
+          className="w-9 h-9 rounded-lg flex items-center justify-center border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary/40 transition-colors"
+        >
+          <span className="material-symbols-outlined text-lg">contrast</span>
+        </button>
         <a
           href={REPO_URL}
           target="_blank"

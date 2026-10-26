@@ -15,6 +15,8 @@ import Footer from './components/Footer';
 
 export default function App() {
   useEffect(() => {
+    const stored = localStorage.getItem('th-theme');
+    if (stored === 'light') document.documentElement.classList.add('light');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
