@@ -59,12 +59,21 @@ export default function App() {
       const my = (y * 0.025) % 40;
       document.documentElement.style.setProperty('--mesh-x', mx + 'px');
       document.documentElement.style.setProperty('--mesh-y', my + 'px');
+      // Parallax on individual cards for a visible 'boxes moving' feel
+      const cards = document.querySelectorAll<HTMLElement>('.card-base, .tactile-raised');
+      cards.forEach((card, i) => {
+        const rect = card.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        const dist = (center - window.innerHeight / 2) / window.innerHeight;
+        const move = dist * 32 * (i % 2 === 0 ? 1 : -1);
+        card.style.transform = `translateY(${move}px)`;
+      });
+      // Grid containers drift too
       const parallaxEls = document.querySelectorAll<HTMLElement>('[data-parallax]');
       parallaxEls.forEach((el) => {
-        const factor = parseFloat(el.dataset.parallax ?? '0.08');
         const rect = el.getBoundingClientRect();
-        const offset = (window.innerHeight - rect.top) * factor;
-        el.style.transform = `translateY(${Math.max(-120, Math.min(120, offset * 0.7))}px)`;
+        const offset = (window.innerHeight - rect.top) * 0.05;
+        el.style.transform = `translateY(${Math.max(-60, Math.min(60, offset * 0.4))}px)`;
       });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
