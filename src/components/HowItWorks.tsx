@@ -12,7 +12,7 @@ const STEPS = [
   {
     icon: 'travel_explore',
     title: 'Verify the employer',
-    body: 'If the posting names a company, Trabahero runs two web searches — registration records and reviews/complaints — and reports what a source states, with links you can open yourself.',
+    body: 'If the posting names a company, Trabahero runs one Tavily search (registration records and reviews together) and reports what a source states, with links you can open yourself.',
   },
   {
     icon: 'speed',
