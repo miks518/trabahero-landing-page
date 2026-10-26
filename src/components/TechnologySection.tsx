@@ -21,9 +21,9 @@ const GROUPS = [
     heading: 'Verification & retrieval',
     icon: 'travel_explore',
     items: [
-      { icon: 'search', name: 'Tavily web search', desc: 'One query per employer check — the employer name plus "Philippines" — with a country boost so local registries surface, at basic search depth by default.' },
+      { icon: 'search', name: 'Tavily web search', desc: 'One query per employer check - the employer name plus "Philippines" - with a country boost so local registries surface, at basic search depth by default.' },
       { icon: 'link', name: 'Cited sources', desc: 'Search results are returned as a flat list of titles and URLs; the model may only repeat what a result states, and the panel shows the links.' },
-      { icon: 'report', name: 'Explicit failures', desc: 'A search that fails is reported as a failed search, never as "nothing found" — a broken lookup can look like a clean company otherwise.' },
+      { icon: 'report', name: 'Explicit failures', desc: 'A search that fails is reported as a failed search, never as "nothing found" - a broken lookup can look like a clean company otherwise.' },
     ],
   },
 ];

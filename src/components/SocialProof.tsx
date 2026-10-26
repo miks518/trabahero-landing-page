@@ -15,7 +15,7 @@ export default function SocialProof() {
           <div className="text-center md:text-left reveal">
             <h4 className="font-headline text-headline-md text-on-surface">Works wherever you find jobs</h4>
             <p className="text-on-surface-variant font-label-md">
-              The element picker runs on any page — no integrations or partnerships required.
+              The element picker runs on any page - no integrations or partnerships required.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 grayscale opacity-40 hover:opacity-70 transition-opacity reveal reveal-delay-1">

@@ -2,7 +2,7 @@ const PROBLEMS = [
   {
     icon: 'request_quote',
     title: 'Advance-fee asks',
-    body: 'A "training kit", an "onboarding fee", a uniform deposit — a real employer does not ask you to pay to start working.',
+    body: 'A "training kit", an "onboarding fee", a uniform deposit - a real employer does not ask you to pay to start working.',
   },
   {
     icon: 'person_off',
@@ -12,7 +12,7 @@ const PROBLEMS = [
   {
     icon: 'forum',
     title: 'Chats that rush you',
-    body: 'Weekend interviews in a messaging app, offers without a call, pressure to decide today — the pattern shows up in the posting itself.',
+    body: 'Weekend interviews in a messaging app, offers without a call, pressure to decide today - the pattern shows up in the posting itself.',
   },
 ];
 
@@ -25,7 +25,7 @@ export default function ProblemSection() {
           <h2 className="font-headline text-headline-lg text-on-surface">Job hunting is hard enough</h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto font-body-md">
             Every week, Filipino job seekers lose money and personal data to postings that look ordinary until it is
-            too late. Most of them share a few tells — if you know where to look.
+            too late. Most of them share a few tells - if you know where to look.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">

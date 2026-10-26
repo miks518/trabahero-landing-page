@@ -31,8 +31,8 @@ export default function Hero() {
             before you reply.
           </h1>
           <p className="font-body text-body-lg text-on-surface-variant max-w-xl">
-            Trabahero reads a posting the way a careful friend would — what it asks of you, what it offers, and who is
-            really behind the company — then shows you the evidence and lets you decide.
+            Trabahero reads a posting the way a careful friend would - what it asks of you, what it offers, and who is
+            really behind the company - then shows you the evidence and lets you decide.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <a
@@ -42,7 +42,7 @@ export default function Hero() {
               className="tactile-btn-accent px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2"
             >
               <span className="material-symbols-outlined">download</span>
-              Get the extension — free
+              Get the extension - free
             </a>
             <a
               href="#how-it-works"

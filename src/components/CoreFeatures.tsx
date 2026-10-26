@@ -18,7 +18,7 @@ export default function CoreFeatures() {
             </div>
             <h3 className="font-headline text-2xl mb-3">Scan a posting from a screenshot</h3>
             <p className="text-on-surface-variant font-body-md mb-6">
-              Capture the listing with the element picker — or paste the text — and the model reports what the posting
+              Capture the listing with the element picker - or paste the text - and the model reports what the posting
               says, never what it guesses. Every flag carries a severity and a quote taken from the posting itself.
             </p>
             <div className="space-y-2.5">
@@ -65,7 +65,7 @@ export default function CoreFeatures() {
             </div>
             <h3 className="font-headline text-2xl mb-3">Employer check, with citations</h3>
             <p className="text-on-surface-variant font-body-md mb-6">
-              Two searches — registration records, then reviews and complaints — across SEC, DTI, PEZA, BOI and local
+              Two searches - registration records, then reviews and complaints - across SEC, DTI, PEZA, BOI and local
               government listings. Results arrive as clickable sources, not as an unsourced verdict.
             </p>
             <div className="space-y-2">
@@ -92,7 +92,7 @@ export default function CoreFeatures() {
               <h3 className="font-headline text-2xl mb-3">Match your resume against saved scans</h3>
               <p className="text-on-surface-variant font-body-md mb-6">
                 Upload a PDF or image resume once, then compare it with the jobs you have already scanned. Filter by
-                risk so you spend your effort on the postings worth answering — and see which skills are missing.
+                risk so you spend your effort on the postings worth answering - and see which skills are missing.
               </p>
             </div>
             <div className="mt-auto space-y-4">
@@ -123,19 +123,19 @@ export default function CoreFeatures() {
           <div className="md:col-span-6 card-base hover-lift reveal reveal-delay-5 gradient-border">
             <h3 className="font-headline text-2xl mb-3">Your history stays on your device</h3>
             <p className="text-on-surface-variant font-body-md">
-              Past scans live in the extension's local storage — review them any time, and clear them by removing the
+              Past scans live in the extension's local storage - review them any time, and clear them by removing the
               extension. Nothing is scanned until you click the picker.
             </p>
           </div>
           <div className="md:col-span-6 card-base hover-lift reveal reveal-delay-5 gradient-border">
             <h3 className="font-headline text-2xl mb-3">Honest about what it cannot reach</h3>
             <p className="text-on-surface-variant font-body-md mb-4">
-              If the backend is unreachable, the panel says so and pauses network actions — it never shows you a result
+              If the backend is unreachable, the panel says so and pauses network actions - it never shows you a result
               that was not measured.
             </p>
             <div className="rounded-lg border-l-4 border-caution bg-caution/10 px-4 py-3 flex items-center gap-3 text-label-md">
               <span className="material-symbols-outlined text-caution">cloud_off</span>
-              <span className="text-on-surface-variant">Server unreachable — Retry</span>
+              <span className="text-on-surface-variant">Server unreachable - Retry</span>
             </div>
           </div>
         </div>

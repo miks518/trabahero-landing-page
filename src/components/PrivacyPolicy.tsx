@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
           <p><strong className="text-on-surface">Effective Date:</strong> September 30, 2026</p>
           <p>
             Trabahero is a Chrome extension that helps protect Filipino job seekers from employment scams. Scanning
-            needs the posting's content, so some data does leave your browser — this policy states exactly what, where
+            needs the posting's content, so some data does leave your browser - this policy states exactly what, where
             it goes, and what never leaves.
           </p>
 
@@ -79,13 +79,13 @@ export default function PrivacyPolicy() {
           <h3 className="text-on-surface font-bold text-base pt-2">7) Your Rights Under RA 10173</h3>
           <p>As a data subject under the Data Privacy Act, you have the right to:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong className="text-on-surface">Be informed</strong> — know what personal information is processed and why (this policy).</li>
-            <li><strong className="text-on-surface">Access</strong> — request a copy of your scan history and resume data stored locally in the extension.</li>
-            <li><strong className="text-on-surface">Rectification</strong> — correct inaccurate data by editing or re-uploading your resume.</li>
-            <li><strong className="text-on-surface">Erasure / Blocking</strong> — delete your scan history and resume data by clearing extension storage or uninstalling the extension.</li>
-            <li><strong className="text-on-surface">Object</strong> — stop future scans by not using the element picker or removing the extension.</li>
-            <li><strong className="text-on-surface">Data Portability</strong> — your scan history is stored in your browser; you can view it in the extension side panel.</li>
-            <li><strong className="text-on-surface">File a complaint</strong> — with the <a href="https://www.privacy.gov.ph/" className="text-primary hover:underline" target="_blank" rel="noreferrer">National Privacy Commission</a> if you believe your rights were violated.</li>
+            <li><strong className="text-on-surface">Be informed</strong> - know what personal information is processed and why (this policy).</li>
+            <li><strong className="text-on-surface">Access</strong> - request a copy of your scan history and resume data stored locally in the extension.</li>
+            <li><strong className="text-on-surface">Rectification</strong> - correct inaccurate data by editing or re-uploading your resume.</li>
+            <li><strong className="text-on-surface">Erasure / Blocking</strong> - delete your scan history and resume data by clearing extension storage or uninstalling the extension.</li>
+            <li><strong className="text-on-surface">Object</strong> - stop future scans by not using the element picker or removing the extension.</li>
+            <li><strong className="text-on-surface">Data Portability</strong> - your scan history is stored in your browser; you can view it in the extension side panel.</li>
+            <li><strong className="text-on-surface">File a complaint</strong> - with the <a href="https://www.privacy.gov.ph/" className="text-primary hover:underline" target="_blank" rel="noreferrer">National Privacy Commission</a> if you believe your rights were violated.</li>
           </ul>
 
           <h3 className="text-on-surface font-bold text-base pt-2">8) User Control</h3>
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
             <li>You open the side panel and activate the element picker on a job listing.</li>
             <li>The selected region's screenshot and text are compressed and sent over HTTPS to the backend.</li>
             <li>The backend forwards it to the AI provider; if an employer was named, its name also goes to the web-search provider.</li>
-            <li>The verdict — anomalies, red flags, verification findings and sources — streams back to the side panel.</li>
+            <li>The verdict - anomalies, red flags, verification findings and sources - streams back to the side panel.</li>
             <li>The result is stored locally so you can revisit it from your history.</li>
           </ul>
 

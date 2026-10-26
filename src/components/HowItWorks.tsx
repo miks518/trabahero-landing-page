@@ -2,7 +2,7 @@ const STEPS = [
   {
     icon: 'crop_free',
     title: 'Pick the posting',
-    body: 'Open the side panel, click the element picker, and select the job posting — on any site, in one click. Trabahero captures that region as a screenshot along with its text.',
+    body: 'Open the side panel, click the element picker, and select the job posting - on any site, in one click. Trabahero captures that region as a screenshot along with its text.',
   },
   {
     icon: 'fact_check',

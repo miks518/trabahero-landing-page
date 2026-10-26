@@ -9,8 +9,8 @@ export default function SupportSection() {
     const name = String(data.get('name') ?? '').trim();
     const replyTo = String(data.get('email') ?? '').trim();
     const message = String(data.get('message') ?? '').trim();
-    const subject = encodeURIComponent(`Trabahero support — ${name || 'feedback'}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name}${replyTo ? ` (${replyTo})` : ''}`);
+    const subject = encodeURIComponent(`Trabahero support - ${name || 'feedback'}`);
+    const body = encodeURIComponent(`${message}\n\n- ${name}${replyTo ? ` (${replyTo})` : ''}`);
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   };
 
@@ -21,7 +21,7 @@ export default function SupportSection() {
           <span className="text-primary font-semibold text-sm tracking-widest uppercase">Support</span>
           <h2 className="font-headline text-headline-lg text-on-surface">Questions or feedback?</h2>
           <p className="text-on-surface-variant font-body-md">
-            The form opens your email app with the message ready to send — nothing is stored on a server.
+            The form opens your email app with the message ready to send - nothing is stored on a server.
           </p>
         </div>
         <div className="card-base reveal reveal-delay-1 gradient-border">

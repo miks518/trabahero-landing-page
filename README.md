@@ -1,6 +1,6 @@
 # Trabahero Landing Page
 
-Landing page for **Trabahero** — a free Chrome extension that scans job postings for scam signals, verifies the employer behind them with cited public sources, and matches jobs to a resume. Built for Filipino job seekers.
+Landing page for **Trabahero** - a free Chrome extension that scans job postings for scam signals, verifies the employer behind them with cited public sources, and matches jobs to a resume. Built for Filipino job seekers.
 
 Static site: Vite + React 19 + TypeScript + Tailwind CSS.
 
@@ -23,9 +23,9 @@ Keep it in step with the product: no invented statistics, no guarantees, no clai
 
 ## Tech Stack
 
-- **Vite** — build tool
+- **Vite** - build tool
 - **React 19** + TypeScript
-- **Tailwind CSS 3** — PostCSS plugin
-- **Google Fonts** — Inter, Hanken Grotesk, Material Symbols
+- **Tailwind CSS 3** - PostCSS plugin
+- **Google Fonts** - Inter, Hanken Grotesk, Material Symbols
 
 Built by Janzel Garcia, Georich Mikko Yuzon, Denzel Capulong, John Uriel Garcia, Princess Myr Manquil, and Neil Andrei Manuntag.

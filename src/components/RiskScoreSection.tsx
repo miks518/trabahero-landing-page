@@ -1,5 +1,5 @@
 const VERDICTS = [
-  { label: 'Do not proceed', tone: 'bg-danger', note: 'A contradiction was found — a verified negative about the employer.' },
+  { label: 'Do not proceed', tone: 'bg-danger', note: 'A contradiction was found - a verified negative about the employer.' },
   { label: 'Caution', tone: 'bg-caution', note: 'Settle the fee recipient and reason before going further.' },
   { label: 'Note', tone: 'bg-secondary', note: "Check the employer's own site for the stated fee or claim." },
   { label: 'Proceed', tone: 'bg-positive', note: 'No red flags and no contradicted claims.' },
@@ -34,7 +34,7 @@ export default function RiskScoreSection() {
               A verdict you can <span className="metallic-gold-text">trace back</span>
             </h2>
             <p className="text-on-surface-variant font-body-lg">
-              Trabahero does not hand you a number. It hands you a short instruction plus the evidence behind it —
+              Trabahero does not hand you a number. It hands you a short instruction plus the evidence behind it -
               the anomalies found in the posting and what the employer check confirmed or contradicted.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
