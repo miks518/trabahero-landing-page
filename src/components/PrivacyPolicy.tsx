@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
           <h3 className="text-on-surface font-bold text-base pt-2">5) How We Use the Information We Access</h3>
           <ul className="list-disc pl-5 space-y-1">
             <li>Identify and warn about suspicious job listings.</li>
-            <li>Calculate risk scores and list the red flags behind them.</li>
+            <li>Calculate a verdict and list the anomalies and red flags behind it.</li>
             <li>Look up the employer behind a posting and cite the sources found.</li>
             <li>Compare resume content against job requirements for match analysis.</li>
             <li>Operate, secure, and troubleshoot the service.</li>
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
             <li>You open the side panel and activate the element picker on a job listing.</li>
             <li>The selected region's screenshot and text are compressed and sent over HTTPS to the backend.</li>
             <li>The backend forwards it to the AI provider; if an employer was named, its name also goes to the web-search provider.</li>
-            <li>The verdict — risk score, red flags, verification findings and sources — streams back to the side panel.</li>
+            <li>The verdict — anomalies, red flags, verification findings and sources — streams back to the side panel.</li>
             <li>The result is stored locally so you can revisit it from your history.</li>
           </ul>
 

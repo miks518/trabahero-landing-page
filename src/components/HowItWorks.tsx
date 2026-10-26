@@ -17,7 +17,7 @@ const STEPS = [
   {
     icon: 'speed',
     title: 'Decide with the evidence',
-    body: 'A 0–100 risk score combines what the posting says with what the employer check found. High-risk results lead with the flags, so you see why before you see anything else.',
+    body: 'A verdict (Do not proceed / Caution / Note / Proceed) combines what the posting says with what the employer check found. The flags lead, so you see why before you see anything else.',
   },
 ];
 

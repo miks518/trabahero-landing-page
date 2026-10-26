@@ -1,5 +1,3 @@
-import type { CSSProperties } from 'react';
-
 type FlagSeverity = 'high' | 'mid' | 'low';
 
 const FLAGS: { severity: FlagSeverity; text: string }[] = [
@@ -32,8 +30,6 @@ const SEVERITY_LABEL: Record<FlagSeverity, string> = {
   low: 'Low',
 };
 
-const RING_OFFSET = 124; // 62% of the 327px circumference
-
 export default function PanelMock() {
   return (
     <div className="relative w-full max-w-[380px] mx-auto scale-in">
@@ -54,39 +50,15 @@ export default function PanelMock() {
           </div>
         </div>
 
-        {/* Risk gauge */}
-        <div className="px-5 pt-5 pb-4 flex items-center gap-5 border-b border-outline-variant/50">
-          <div className="relative w-[92px] h-[92px] shrink-0">
-            <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
-              <circle cx="60" cy="60" r="52" fill="none" stroke="#34353a" strokeWidth="10" />
-              <circle
-                cx="60"
-                cy="60"
-                r="52"
-                fill="none"
-                stroke="#f87171"
-                strokeWidth="10"
-                strokeLinecap="round"
-                className="ring-animate"
-                style={{ '--ring-offset': RING_OFFSET } as CSSProperties}
-              />
-            </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-2xl font-extrabold text-on-surface leading-none">62</span>
-              <span className="text-[10px] uppercase tracking-widest text-outline mt-1">Risk</span>
-            </div>
+        {/* Verdict */}
+        <div className="px-5 pt-5 pb-4 border-b border-outline-variant/50">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-danger/15 border border-danger/40 text-danger text-label-sm font-semibold">
+            <span className="material-symbols-outlined text-sm">block</span>
+            Do not proceed
           </div>
-          <div className="space-y-1.5 min-w-0">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-danger/15 border border-danger/40 text-danger text-label-sm font-semibold">
-              <span className="material-symbols-outlined text-sm">warning</span>
-              High risk
-            </div>
-            <p className="text-label-sm text-outline leading-snug">
-              Posting score + employer penalty
-              <br />
-              <span className="text-on-surface-variant">Sample result</span>
-            </p>
-          </div>
+          <p className="text-label-sm text-on-surface-variant leading-snug mt-2">
+            One high-severity indicator plus a contradicted employer claim. Sample result.
+          </p>
         </div>
 
         {/* Red flags */}

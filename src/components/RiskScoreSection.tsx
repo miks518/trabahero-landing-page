@@ -1,25 +1,25 @@
-const BANDS = [
-  { label: 'Low', range: '0–30', cls: 'bg-positive' },
-  { label: 'Moderate', range: '31–50', cls: 'bg-caution' },
-  { label: 'High', range: '51–75', cls: 'bg-[#f97316]' },
-  { label: 'Critical', range: '76–100', cls: 'bg-danger' },
+const VERDICTS = [
+  { label: 'Do not proceed', tone: 'bg-danger', note: 'A contradiction was found — a verified negative about the employer.' },
+  { label: 'Caution', tone: 'bg-caution', note: 'Settle the fee recipient and reason before going further.' },
+  { label: 'Note', tone: 'bg-secondary', note: "Check the employer's own site for the stated fee or claim." },
+  { label: 'Proceed', tone: 'bg-positive', note: 'No red flags and no contradicted claims.' },
 ];
 
 const NOTES = [
   {
-    icon: 'stacked_bar_chart',
-    title: 'Two stages, added together',
-    body: 'Stage one scores the posting from the indicators it reports — high, mid and low severity. Stage two can only add a penalty when a source states a negative about the employer.',
+    icon: 'gavel',
+    title: 'Authored, not generated',
+    body: 'The verdict headline is one of four reviewed strings looked up by verdict. It cannot drift between runs, and it cannot assert more than the evidence supports.',
   },
   {
     icon: 'search_off',
     title: 'Absence is not evidence',
-    body: 'An employer that could not be found, or an all-"not confirmed" result, adds zero. A failed lookup is never scored as a guilty company.',
+    body: 'An employer that could not be found, or an all-"not confirmed" result, adds nothing. A failed lookup is never treated as a guilty company.',
   },
   {
     icon: 'visibility_off',
     title: 'No invented numbers',
-    body: 'If no company name was captured, the panel asks you for one instead of scoring an employer it never checked. Nothing on screen was measured.',
+    body: 'If no company name was captured, the panel asks you for one instead of judging an employer it never checked.',
   },
 ];
 
@@ -29,20 +29,19 @@ export default function RiskScoreSection() {
       <div className="max-w-7xl mx-auto px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 space-y-5 reveal">
-            <span className="text-primary font-semibold text-sm tracking-widest uppercase">The risk score</span>
+            <span className="text-primary font-semibold text-sm tracking-widest uppercase">The verdict</span>
             <h2 className="font-headline text-headline-lg text-on-surface">
-              A number you can <span className="metallic-gold-text">trace back</span>
+              A verdict you can <span className="metallic-gold-text">trace back</span>
             </h2>
             <p className="text-on-surface-variant font-body-lg">
-              Trabahero shows a single 0–100 score with the level attached — but the point is not the number. It is
-              that you can always see which stage produced it and which source stands behind it.
+              Trabahero does not hand you a number. It hands you a short instruction plus the evidence behind it —
+              the anomalies found in the posting and what the employer check confirmed or contradicted.
             </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              {BANDS.map((band) => (
-                <div key={band.label} className="flex items-center gap-2 text-label-sm text-on-surface-variant">
-                  <span className={`w-3 h-3 rounded-sm ${band.cls}`} />
-                  <span className="text-on-surface-variant font-medium">{band.label}</span>
-                  <span>{band.range}</span>
+            <div className="flex flex-wrap gap-3 pt-2">
+              {VERDICTS.map((v) => (
+                <div key={v.label} className="flex items-center gap-2 text-label-sm text-on-surface-variant">
+                  <span className={`w-3 h-3 rounded-sm ${v.tone}`} />
+                  <span className="text-on-surface-variant font-medium">{v.label}</span>
                 </div>
               ))}
             </div>
@@ -51,39 +50,35 @@ export default function RiskScoreSection() {
           <div className="lg:col-span-7 card-base reveal reveal-delay-1 gradient-border">
             <div className="space-y-3">
               <div className="flex items-center justify-between text-label-sm text-on-surface-variant">
-                <span>Posting indicators</span>
-                <span className="text-on-surface font-semibold">+ 41</span>
+                <span>Anomalies found in the posting</span>
+                <span className="text-on-surface font-semibold">3</span>
               </div>
               <div className="h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                <div className="h-full w-[41%] bg-primary rounded-full" />
+                <div className="h-full w-[60%] bg-primary rounded-full" />
               </div>
 
               <div className="flex items-center justify-between text-label-sm text-on-surface-variant pt-2">
-                <span>Employer verification penalty</span>
-                <span className="text-on-surface font-semibold">+ 21</span>
+                <span>Employer claims contradicted</span>
+                <span className="text-on-surface font-semibold">1</span>
               </div>
               <div className="h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                <div className="h-full w-[21%] bg-danger rounded-full ml-[41%]" />
+                <div className="h-full w-[25%] bg-danger rounded-full" />
               </div>
             </div>
 
             <div className="mt-8 pt-6 border-t border-outline-variant/30">
               <div className="flex items-end justify-between mb-3">
                 <div>
-                  <div className="text-label-sm text-on-surface-variant uppercase tracking-wider">Final score</div>
-                  <div className="text-4xl font-extrabold text-on-surface">62 <span className="text-lg text-on-surface-variant font-bold">/ 100</span></div>
+                  <div className="text-label-sm text-on-surface-variant uppercase tracking-wider">Verdict</div>
+                  <div className="text-3xl font-extrabold text-danger">Do not proceed</div>
                 </div>
-                <span className="px-3 py-1.5 rounded-full bg-[#f97316]/15 border border-[#f97316]/40 text-[#f97316] text-label-sm font-bold">
-                  High risk
+                <span className="px-3 py-1.5 rounded-full bg-danger/15 border border-danger/40 text-danger text-label-sm font-bold">
+                  Critical
                 </span>
               </div>
-              <div className="relative h-4 rounded-full overflow-hidden flex">
-                <div className="h-full w-[31%] bg-positive" />
-                <div className="h-full w-[20%] bg-caution" />
-                <div className="h-full w-[25%] bg-[#f97316]" />
-                <div className="h-full w-[24%] bg-danger" />
-                <div className="absolute top-0 bottom-0 w-0.5 bg-on-surface shadow-[0_0_6px_rgba(255,255,255,0.8)]" style={{ left: '62%' }} />
-              </div>
+              <p className="text-label-sm text-on-surface-variant">
+                Anomaly evidence + employer contradiction. Sample result.
+              </p>
             </div>
           </div>
         </div>
