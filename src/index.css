@@ -100,7 +100,8 @@ body::before {
     radial-gradient(circle at 50% 80%, rgb(var(--c-tertiary-container)) 0%, transparent 45%);
   opacity: 0.35;
   filter: blur(60px);
-  animation: mesh-drift 18s ease-in-out infinite alternate;
+  transform: translate(var(--mesh-x, 0px), var(--mesh-y, 0px)) scale(1.1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 @keyframes mesh-drift {

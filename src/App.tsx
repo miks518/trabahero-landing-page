@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   useEffect(() => {
-    const lenis = new Lenis({ duration: 1.4, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, wheelMultiplier: 1.1 });
+    const lenis = new Lenis({ duration: 1.9, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -12 * t)), smoothWheel: true, wheelMultiplier: 1.05, touchMultiplier: 1.5 });
     let rafId = 0;
     const raf = (time: number) => { lenis.raf(time); rafId = requestAnimationFrame(raf); };
     rafId = requestAnimationFrame(raf);
@@ -55,6 +55,10 @@ export default function App() {
         const speed = parseFloat(orb.dataset.speed ?? '0.02');
         orb.style.transform = `translateY(${y * speed * 0.6}px)`;
       });
+      const mx = (y * 0.04) % 60;
+      const my = (y * 0.025) % 40;
+      document.documentElement.style.setProperty('--mesh-x', mx + 'px');
+      document.documentElement.style.setProperty('--mesh-y', my + 'px');
       const parallaxEls = document.querySelectorAll<HTMLElement>('[data-parallax]');
       parallaxEls.forEach((el) => {
         const factor = parseFloat(el.dataset.parallax ?? '0.08');
