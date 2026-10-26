@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
@@ -15,6 +17,10 @@ import Footer from './components/Footer';
 
 export default function App() {
   useEffect(() => {
+    const lenis = new Lenis({ duration: 1.4, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, wheelMultiplier: 1.1 });
+    let rafId = 0;
+    const raf = (time: number) => { lenis.raf(time); rafId = requestAnimationFrame(raf); };
+    rafId = requestAnimationFrame(raf);
     const stored = localStorage.getItem('th-theme');
     if (stored === 'light') document.documentElement.classList.add('light');
     const observer = new IntersectionObserver(
@@ -54,7 +60,7 @@ export default function App() {
         const factor = parseFloat(el.dataset.parallax ?? '0.08');
         const rect = el.getBoundingClientRect();
         const offset = (window.innerHeight - rect.top) * factor;
-        el.style.transform = `translateY(${Math.max(-40, Math.min(40, offset * 0.15))}px)`;
+        el.style.transform = `translateY(${Math.max(-120, Math.min(120, offset * 0.7))}px)`;
       });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -80,6 +86,8 @@ export default function App() {
 
     return () => {
       observer.disconnect();
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousemove', handleMouseMove);
       cards.forEach((card) => {
