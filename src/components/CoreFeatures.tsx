@@ -10,7 +10,7 @@ export default function CoreFeatures() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter" data-parallax="0.05">
           {/* Posting scan */}
           <div className="md:col-span-7 card-base hover-lift reveal reveal-delay-1 gradient-border">
             <div className="gold-badge mb-4">

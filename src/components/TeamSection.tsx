@@ -26,7 +26,7 @@ export default function TeamSection() {
             Six developers and researchers building the tool they wanted for Filipino job seekers.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-gutter">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-gutter" data-parallax="0.05">
           {team.map((member, i) => (
             <div
               key={member.name}

@@ -48,7 +48,7 @@ export default function TechnologySection() {
                 <span className="material-symbols-outlined text-primary">{group.icon}</span>
                 {group.heading}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter" data-parallax="0.05">
                 {group.items.map((item, i) => (
                   <div
                     key={item.name}

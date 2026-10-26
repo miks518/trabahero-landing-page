@@ -42,6 +42,24 @@ export default function App() {
 
     document.addEventListener('mousemove', handleMouseMove);
 
+    const handleScroll = () => {
+      const y = window.scrollY;
+      const orbs = document.querySelectorAll<HTMLElement>('.orb');
+      orbs.forEach((orb) => {
+        const speed = parseFloat(orb.dataset.speed ?? '0.02');
+        orb.style.transform = `translateY(${y * speed * 0.6}px)`;
+      });
+      const parallaxEls = document.querySelectorAll<HTMLElement>('[data-parallax]');
+      parallaxEls.forEach((el) => {
+        const factor = parseFloat(el.dataset.parallax ?? '0.08');
+        const rect = el.getBoundingClientRect();
+        const offset = (window.innerHeight - rect.top) * factor;
+        el.style.transform = `translateY(${Math.max(-40, Math.min(40, offset * 0.15))}px)`;
+      });
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
     const cards = document.querySelectorAll<HTMLElement>('.tactile-raised');
     const handleCardMove = (e: MouseEvent, card: HTMLElement) => {
       const rect = card.getBoundingClientRect();
@@ -62,6 +80,7 @@ export default function App() {
 
     return () => {
       observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousemove', handleMouseMove);
       cards.forEach((card) => {
         card.removeEventListener('mousemove', (e) => handleCardMove(e, card));

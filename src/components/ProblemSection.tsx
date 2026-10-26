@@ -28,7 +28,7 @@ export default function ProblemSection() {
             too late. Most of them share a few tells - if you know where to look.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter" data-parallax="0.05">
           {PROBLEMS.map((problem, i) => (
             <div
               key={problem.title}
