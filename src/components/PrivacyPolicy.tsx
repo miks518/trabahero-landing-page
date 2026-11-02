@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
             <li><strong className="text-on-surface">Manual Control:</strong> nothing is scanned until you use the element picker or paste a posting.</li>
             <li><strong className="text-on-surface">Local History:</strong> your scan history sits in extension storage on your device; removing the extension removes it.</li>
             <li><strong className="text-on-surface">Uninstall:</strong> removing the extension stops all data processing.</li>
-            <li><strong className="text-on-surface">Questions:</strong> contact us at trabahero+@gmail.com to ask what a given request sent.</li>
+            <li><strong className="text-on-surface">Questions:</strong> contact us at 2023304146@pampangastateu.edu.ph to ask what a given request sent.</li>
           </ul>
 
           <h3 className="text-on-surface font-bold text-base pt-2">9) Technical Details</h3>
@@ -144,7 +144,7 @@ export default function PrivacyPolicy() {
           <h3 className="text-on-surface font-bold text-base pt-2">14) Contact Us</h3>
           <p>
             If you have questions or requests related to privacy, reach out at{' '}
-            <strong className="text-on-surface">trabahero+@gmail.com</strong> or through our GitHub repository. We take
+            <strong className="text-on-surface">2023304146@pampangastateu.edu.ph</strong> or through our GitHub repository. We take
             privacy and security issues seriously and will respond promptly to legitimate concerns.
             <br />
             You may also contact the <a href="https://www.privacy.gov.ph/" className="text-primary hover:underline" target="_blank" rel="noreferrer">National Privacy Commission</a> directly at
