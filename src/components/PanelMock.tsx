@@ -46,7 +46,7 @@ export default function PanelMock() {
           </div>
           <div className="flex items-center gap-1.5 text-label-sm text-outline">
             <span className="w-1.5 h-1.5 rounded-full bg-positive animate-pulse-dot" />
-            v0.5.0
+            v1.0.0
           </div>
         </div>
 

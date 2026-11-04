@@ -54,7 +54,7 @@ export default function InstallSection() {
                 Download the extension
               </a>
               <span className="text-on-surface-variant font-label-sm">
-                Version 0.5.0 · 114 KB · Chrome, Edge, Brave or Opera on a desktop
+                Latest build · Chrome, Edge, Brave or Opera on a desktop
               </span>
             </div>
             <ul className="space-y-2 pt-2 text-sm text-on-surface-variant">
