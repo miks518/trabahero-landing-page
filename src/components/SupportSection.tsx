@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
-const EMAIL = '2023304146@pampangastateu.edu.ph';
+const EMAIL = 'support@traba-hero.online';
 
 type Draft = {
   subject: string;
