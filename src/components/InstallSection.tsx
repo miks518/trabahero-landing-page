@@ -30,13 +30,17 @@ export default function InstallSection() {
         <div className="grid gap-10 md:grid-cols-[1fr_1.1fr] md:items-start">
           <div className="space-y-5">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
-              <span className="material-symbols-outlined text-base">schedule</span>
-              Chrome Web Store review pending
+              <span className="material-symbols-outlined text-base">verified</span>
+              Available now · Early access
             </span>
-            <h2 className="font-headline text-headline-lg text-on-surface">Try it before the listing goes live</h2>
+            <h2 className="font-headline text-headline-lg text-on-surface">Get Traba-Hero today</h2>
             <p className="text-on-surface-variant font-body-md">
-              The extension is still in review. Until it is published, you can install it directly from here as an
-              unpacked build. It is the same code that was submitted, and it already talks to our hosted backend.
+              Install it straight from this page in under a minute. This is the release build that is going to the
+              Chrome Web Store, and it already runs on our hosted backend - so scanning works the moment you load it.
+            </p>
+            <p className="text-on-surface-variant font-body-md">
+              A one-click Chrome Web Store install is coming next; until then, the steps on the right take about a
+              minute and the extension behaves exactly the same.
             </p>
             <div className="flex flex-col items-start gap-3">
               <a
