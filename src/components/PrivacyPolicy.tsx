@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         <div className="card-base space-y-4 text-sm text-on-surface-variant leading-relaxed">
           <p><strong className="text-on-surface">Effective Date:</strong> September 30, 2026</p>
           <p>
-            Trabahero is a Chrome extension that helps protect Filipino job seekers from employment scams. Scanning
+            Traba-Hero is a Chrome extension that helps protect Filipino job seekers from employment scams. Scanning
             needs the posting's content, so some data does leave your browser - this policy states exactly what, where
             it goes, and what never leaves.
           </p>
@@ -18,12 +18,12 @@ export default function PrivacyPolicy() {
           <p>
             This policy is governed by the <strong className="text-on-surface">Data Privacy Act of 2012 (Republic Act No. 10173)</strong>
             and its Implementing Rules and Regulations, as enforced by the <strong className="text-on-surface">National Privacy Commission (NPC)</strong>.
-            Trabahero processes personal information in accordance with the principles of transparency, legitimate purpose,
+            Traba-Hero processes personal information in accordance with the principles of transparency, legitimate purpose,
             and proportionality under RA 10173.
           </p>
 
-          <h3 className="text-on-surface font-bold text-base pt-2">2) What Trabahero Accesses</h3>
-          <p>To provide job scam detection and resume matching, Trabahero's content scripts and side panel access:</p>
+          <h3 className="text-on-surface font-bold text-base pt-2">2) What Traba-Hero Accesses</h3>
+          <p>To provide job scam detection and resume matching, Traba-Hero's content scripts and side panel access:</p>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong className="text-on-surface">Page Content (DOM):</strong> the text of the job listing element you explicitly select with the element picker.</li>
             <li><strong className="text-on-surface">Screenshots (Tab Capture):</strong> a screenshot of the region you selected, compressed before sending, for visual analysis.</li>
@@ -38,13 +38,13 @@ export default function PrivacyPolicy() {
           <h3 className="text-on-surface font-bold text-base pt-2">3) Data Processing and Security</h3>
           <p>
             <strong className="text-on-surface">What is sent:</strong> the selected screenshot and/or text is sent over
-            HTTPS to the Trabahero backend, which forwards it to the configured AI provider (currently OpenRouter) for
+            HTTPS to the Traba-Hero backend, which forwards it to the configured AI provider (currently OpenRouter) for
             analysis. When a posting names an employer, the employer's name is also sent to a web-search provider
             (currently Tavily) to look up registration records and public reviews.
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong className="text-on-surface">Encryption:</strong> all transmission uses HTTPS/TLS.</li>
-            <li><strong className="text-on-surface">No server-side scan history:</strong> results are stored in your browser, not in a Trabahero database.</li>
+            <li><strong className="text-on-surface">No server-side scan history:</strong> results are stored in your browser, not in a Traba-Hero database.</li>
             <li><strong className="text-on-surface">Operational logs:</strong> the backend may keep short-lived logs of errors and request metadata for debugging. They do not contain your scan history.</li>
             <li><strong className="text-on-surface">Data Minimization:</strong> only the content needed for the analysis you started is sent.</li>
             <li><strong className="text-on-surface">Retention:</strong> scan history and resume data remain in your browser's local storage until you clear them or uninstall the extension.</li>
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-5 space-y-1">
             <li><strong className="text-on-surface">AI provider (OpenRouter):</strong> receives the screenshot/text you chose to scan so a model can read it. Their handling of prompts is governed by their own policy.</li>
             <li><strong className="text-on-surface">Web search (Tavily):</strong> receives only the employer's name for the verification lookup.</li>
-            <li><strong className="text-on-surface">No Advertising or Analytics:</strong> Trabahero uses no ad networks, analytics SDKs, or trackers.</li>
+            <li><strong className="text-on-surface">No Advertising or Analytics:</strong> Traba-Hero uses no ad networks, analytics SDKs, or trackers.</li>
           </ul>
 
           <h3 className="text-on-surface font-bold text-base pt-2">5) How We Use the Information We Access</h3>
@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
             <li><strong className="text-on-surface">activeTab:</strong> to read the page when you activate the element picker.</li>
             <li><strong className="text-on-surface">storage:</strong> to save preferences and scan results locally.</li>
             <li><strong className="text-on-surface">tabs:</strong> to communicate between the side panel and the content script.</li>
-            <li><strong className="text-on-surface">sidePanel:</strong> to open the Trabahero side panel.</li>
+            <li><strong className="text-on-surface">sidePanel:</strong> to open the Traba-Hero side panel.</li>
             <li><strong className="text-on-surface">host permissions (&lt;all_urls&gt;):</strong> to inject the element picker into pages and to call the analysis backend.</li>
           </ul>
           <p><strong className="text-on-surface">Data Flow:</strong></p>
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
 
           <h3 className="text-on-surface font-bold text-base pt-2">12) Security Disclosure</h3>
           <p>
-            If you discover a security vulnerability in Trabahero, please report it responsibly through our GitHub
+            If you discover a security vulnerability in Traba-Hero, please report it responsibly through our GitHub
             repository at{' '}
             <a href="https://github.com/miks518/traba-hero" className="text-primary hover:underline">
               https://github.com/miks518/traba-hero
@@ -135,7 +135,7 @@ export default function PrivacyPolicy() {
 
           <h3 className="text-on-surface font-bold text-base pt-2">13) Chrome Web Store Disclosures</h3>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong className="text-on-surface">Purpose limitation:</strong> data accessed by Trabahero is used only for scam detection, employer verification, and resume matching.</li>
+            <li><strong className="text-on-surface">Purpose limitation:</strong> data accessed by Traba-Hero is used only for scam detection, employer verification, and resume matching.</li>
             <li><strong className="text-on-surface">Limited Use:</strong> we do not use data for unrelated purposes like advertising or profiling.</li>
             <li><strong className="text-on-surface">Transparency:</strong> this policy details what we access and when network calls occur.</li>
             <li><strong className="text-on-surface">Control:</strong> users can stop, uninstall, or clear their data at any time.</li>

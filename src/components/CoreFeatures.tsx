@@ -4,7 +4,7 @@ export default function CoreFeatures() {
       <div className="max-w-7xl mx-auto px-margin-desktop">
         <div className="text-center space-y-4 mb-16 reveal">
           <span className="text-primary font-semibold text-sm tracking-widest uppercase">Features</span>
-          <h2 className="font-headline text-headline-lg metallic-gold-text">What Trabahero actually does</h2>
+          <h2 className="font-headline text-headline-lg metallic-gold-text">What Traba-Hero actually does</h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto font-body-md">
             Everything below runs from one side panel, on the page you are already reading.
           </p>
@@ -44,7 +44,7 @@ export default function CoreFeatures() {
               </div>
               <h3 className="font-headline text-2xl mb-3">The offer is still assessed</h3>
               <p className="text-on-surface-variant font-body-md">
-                Plenty of scams never name a company. When there is nothing to verify, Trabahero analyses the offer on
+                Plenty of scams never name a company. When there is nothing to verify, Traba-Hero analyses the offer on
                 its own terms instead of guessing at a name.
               </p>
             </div>

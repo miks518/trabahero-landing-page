@@ -7,7 +7,7 @@ const PROBLEMS = [
   {
     icon: 'person_off',
     title: 'Employers that do not exist',
-    body: 'Listings borrow a real company\'s name, or name no company at all. Trabahero checks whether anyone can actually be found behind the posting.',
+    body: 'Listings borrow a real company\'s name, or name no company at all. Traba-Hero checks whether anyone can actually be found behind the posting.',
   },
   {
     icon: 'forum',

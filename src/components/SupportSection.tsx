@@ -32,7 +32,7 @@ export default function SupportSection() {
       return;
     }
 
-    const subject = `Trabahero support - ${name}`;
+    const subject = `Traba-Hero support - ${name}`;
     const body = `${message}\n\n- ${name} (${replyTo})`;
 
     setError('');

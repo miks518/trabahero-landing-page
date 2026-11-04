@@ -42,7 +42,7 @@ export default function PanelMock() {
             <span className="w-2.5 h-2.5 rounded-full bg-danger" />
             <span className="w-2.5 h-2.5 rounded-full bg-caution" />
             <span className="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim" />
-            <span className="ml-2 font-headline-sm text-label-md text-on-surface">Trabahero</span>
+            <span className="ml-2 font-headline-sm text-label-md text-on-surface">Traba-Hero</span>
           </div>
           <div className="flex items-center gap-1.5 text-label-sm text-outline">
             <span className="w-1.5 h-1.5 rounded-full bg-positive animate-pulse-dot" />

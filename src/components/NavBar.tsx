@@ -17,7 +17,7 @@ export default function NavBar() {
             <span className="material-symbols-outlined text-on-primary text-lg">shield</span>
           </span>
           <span className="font-headline font-bold text-on-surface group-hover:text-primary transition-colors text-headline-md">
-            Trabahero
+            Traba-Hero
           </span>
         </a>
         <div className="hidden md:flex items-center gap-stack-lg">

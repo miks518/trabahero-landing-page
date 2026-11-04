@@ -34,7 +34,7 @@ export default function RiskScoreSection() {
               A verdict you can <span className="metallic-gold-text">trace back</span>
             </h2>
             <p className="text-on-surface-variant font-body-lg">
-              Trabahero does not hand you a number. It hands you a short instruction plus the evidence behind it -
+              Traba-Hero does not hand you a number. It hands you a short instruction plus the evidence behind it -
               the anomalies found in the posting and what the employer check confirmed or contradicted.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">

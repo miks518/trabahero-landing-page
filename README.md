@@ -1,6 +1,6 @@
-# Trabahero Landing Page
+# Traba-Hero Landing Page
 
-Landing page for **Trabahero** - a free Chrome extension that scans job postings for scam signals, verifies the employer behind them with cited public sources, and matches jobs to a resume. Built for Filipino job seekers.
+Landing page for **Traba-Hero** - a free Chrome extension that scans job postings for scam signals, verifies the employer behind them with cited public sources, and matches jobs to a resume. Built for Filipino job seekers.
 
 Static site: Vite + React 19 + TypeScript + Tailwind CSS.
 
