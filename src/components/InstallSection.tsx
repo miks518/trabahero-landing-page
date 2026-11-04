@@ -4,7 +4,7 @@ const STEPS = [
   {
     icon: 'download',
     title: 'Download and unzip',
-    body: 'Save the ZIP and extract it to a folder you will keep - for example in Documents. Do not delete the folder afterwards, Chrome loads the extension from it.',
+    body: 'Save the ZIP, then extract it into a folder you will keep - for example in Documents. Windows: right-click the ZIP and choose "Extract All". macOS: double-click it. Chrome cannot load a ZIP, it needs the extracted folder.',
   },
   {
     icon: 'toggle_on',
@@ -14,7 +14,7 @@ const STEPS = [
   {
     icon: 'folder_open',
     title: 'Load unpacked',
-    body: 'Click "Load unpacked" and select the folder you extracted. "Traba-Hero" appears in the list.',
+    body: 'Click "Load unpacked" and select the extracted folder - the one that has manifest.json directly inside it. "Traba-Hero" then appears in the list.',
   },
   {
     icon: 'select_window',
