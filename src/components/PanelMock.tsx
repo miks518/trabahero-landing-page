@@ -54,7 +54,7 @@ export default function PanelMock() {
         <div className="px-5 pt-5 pb-4 border-b border-outline-variant/50">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-danger/15 border border-danger/40 text-danger text-label-sm font-semibold">
             <span className="material-symbols-outlined text-sm">block</span>
-            Do not proceed
+            Contradicted
           </div>
           <p className="text-label-sm text-on-surface-variant leading-snug mt-2">
             One high-severity indicator plus a contradicted employer claim. Sample result.

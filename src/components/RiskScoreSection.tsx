@@ -1,15 +1,14 @@
 const VERDICTS = [
-  { label: 'Do not proceed', tone: 'bg-danger', note: 'A contradiction was found - a verified negative about the employer.' },
+  { label: 'Contradicted', tone: 'bg-danger', note: 'A contradiction was found - a verified negative about the employer.' },
   { label: 'Caution', tone: 'bg-caution', note: 'Settle the fee recipient and reason before going further.' },
-  { label: 'Note', tone: 'bg-secondary', note: "Check the employer's own site for the stated fee or claim." },
-  { label: 'Proceed', tone: 'bg-positive', note: 'No red flags and no contradicted claims.' },
+  { label: 'Nothing found against it', tone: 'bg-positive', note: 'No red flags and no contradicted claims.' },
 ];
 
 const NOTES = [
   {
     icon: 'gavel',
     title: 'Authored, not generated',
-    body: 'The verdict headline is one of four reviewed strings looked up by verdict. It cannot drift between runs, and it cannot assert more than the evidence supports.',
+    body: 'The verdict headline is one of three reviewed strings looked up by verdict. It cannot drift between runs, and it cannot assert more than the evidence supports.',
   },
   {
     icon: 'search_off',
@@ -70,7 +69,7 @@ export default function RiskScoreSection() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-label-sm text-on-surface-variant uppercase tracking-wider">Verdict</div>
-                  <div className="text-3xl font-extrabold text-danger">Do not proceed</div>
+                  <div className="text-3xl font-extrabold text-danger">Contradicted</div>
                 </div>
                 <span className="px-3 py-1.5 rounded-full bg-danger/15 border border-danger/40 text-danger text-label-sm font-bold">
                   Critical

@@ -17,7 +17,7 @@ const STEPS = [
   {
     icon: 'speed',
     title: 'Decide with the evidence',
-    body: 'A verdict (Do not proceed / Caution / Note / Proceed) combines what the posting says with what the employer check found. The flags lead, so you see why before you see anything else.',
+    body: 'A verdict (Contradicted / Caution / Nothing found against it) combines what the posting says with what the employer check found. The flags lead, so you see why before you see anything else.',
   },
 ];
 
