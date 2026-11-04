@@ -1,4 +1,6 @@
-const DOWNLOAD_URL = `${import.meta.env.BASE_URL}traba-hero-extension.zip`;
+// Permanent link: GitHub serves the newest non-prerelease asset with this exact name,
+// so the URL never changes even when a new build is published.
+const DOWNLOAD_URL = 'https://github.com/miks518/traba-hero/releases/latest/download/traba-hero-extension.zip';
 
 const STEPS = [
   {
@@ -63,7 +65,7 @@ export default function InstallSection() {
               </li>
               <li className="flex gap-2">
                 <span className="material-symbols-outlined text-primary text-base">info</span>
-                It does not update on its own - come back here for a newer ZIP.
+                It does not update on its own - come back to this page to download the newest build.
               </li>
               <li className="flex gap-2">
                 <span className="material-symbols-outlined text-primary text-base">info</span>
