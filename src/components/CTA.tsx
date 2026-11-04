@@ -19,9 +19,7 @@ export default function CTA() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a
-              href={REPO_URL}
-              target="_blank"
-              rel="noreferrer"
+              href="#install"
               className="tactile-btn-accent px-10 py-4 rounded-xl font-extrabold text-lg flex items-center gap-2"
             >
               <span className="material-symbols-outlined">download</span>

@@ -1,5 +1,3 @@
-const REPO_URL = 'https://github.com/miks518/traba-hero';
-
 const LINKS = [
   { href: '#how-it-works', label: 'How it works' },
   { href: '#features', label: 'Features' },
@@ -44,13 +42,11 @@ export default function NavBar() {
           <span className="material-symbols-outlined text-lg">contrast</span>
         </button>
         <a
-          href={REPO_URL}
-          target="_blank"
-          rel="noreferrer"
+          href="#install"
           className="tactile-btn-accent px-5 py-2 rounded-lg font-bold text-label-md flex items-center gap-1.5"
         >
           Get it free
-          <span className="material-symbols-outlined text-base">open_in_new</span>
+          <span className="material-symbols-outlined text-base">download</span>
         </a>
       </div>
     </nav>

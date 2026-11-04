@@ -11,6 +11,7 @@ import SocialProof from './components/SocialProof';
 import TechnologySection from './components/TechnologySection';
 import TeamSection from './components/TeamSection';
 import CTA from './components/CTA';
+import InstallSection from './components/InstallSection';
 import SupportSection from './components/SupportSection';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Footer from './components/Footer';
@@ -123,6 +124,7 @@ export default function App() {
         <TechnologySection />
         <TeamSection />
         <CTA />
+        <InstallSection />
         <SupportSection />
         <PrivacyPolicy />
       </main>
