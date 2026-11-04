@@ -7,8 +7,6 @@ const CHIPS = [
   { icon: 'lock', label: 'No account needed' },
 ];
 
-const REPO_URL = 'https://github.com/miks518/traba-hero';
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-24 md:pt-28 pb-28 md:pb-36">
@@ -36,9 +34,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <a
-              href={REPO_URL}
-              target="_blank"
-              rel="noreferrer"
+              href="#install"
               className="tactile-btn-accent px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2"
             >
               <span className="material-symbols-outlined">download</span>
